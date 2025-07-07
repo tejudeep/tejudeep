@@ -4,6 +4,7 @@
     --accent-color: #007AFF;
     --background-color: #ffffff;
     --text-color: #333333;
+    --card-background: #f8f9fa;
 }
 
 * {
@@ -25,9 +26,11 @@ body {
     padding: 40px 20px;
 }
 
+/* Header Styles */
 header {
     text-align: center;
     margin-bottom: 60px;
+    padding-top: 40px;
 }
 
 .header-content h1 {
@@ -49,6 +52,7 @@ header {
     margin-bottom: 20px;
 }
 
+/* Social Links */
 .social-links {
     margin-top: 20px;
 }
@@ -65,11 +69,16 @@ header {
     color: var(--accent-color);
 }
 
+/* About Section */
+.about {
+    margin-bottom: 60px;
+}
+
 .intro-text {
     font-size: 1.4rem;
     line-height: 1.8;
-    margin-bottom: 60px;
     color: var(--secondary-color);
+    margin-bottom: 30px;
 }
 
 .highlight {
@@ -77,20 +86,47 @@ header {
     font-weight: 500;
 }
 
-.experience {
-    margin-top: 40px;
+/* Education Section */
+.education {
+    margin-bottom: 60px;
 }
 
-.experience-item {
-    margin-bottom: 40px;
-    padding: 30px;
-    background: #f8f9fa;
+.education-item {
+    background: var(--card-background);
+    padding: 20px;
     border-radius: 12px;
+    margin-bottom: 20px;
     transition: transform 0.3s ease;
+}
+
+.education-item:hover {
+    transform: translateY(-5px);
+}
+
+.school h3 {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.degree {
+    color: var(--secondary-color);
+    font-size: 1rem;
+}
+
+/* Experience Section */
+.experience-item {
+    background: var(--card-background);
+    padding: 30px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
 .experience-item:hover {
     transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 .company {
@@ -114,6 +150,7 @@ header {
     color: var(--accent-color);
     font-weight: 500;
     margin-bottom: 15px;
+    font-size: 1.1rem;
 }
 
 .achievements {
@@ -124,6 +161,7 @@ header {
     margin-bottom: 10px;
     padding-left: 20px;
     position: relative;
+    color: var(--secondary-color);
 }
 
 .achievements li::before {
@@ -133,6 +171,49 @@ header {
     left: 0;
 }
 
+/* Skills Section */
+.skills {
+    margin-top: 60px;
+    background: var(--card-background);
+    padding: 30px;
+    border-radius: 12px;
+}
+
+.skills h2 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.skills-content p {
+    color: var(--secondary-color);
+    line-height: 1.8;
+}
+
+/* Footer */
+footer {
+    margin-top: 60px;
+    text-align: center;
+    padding: 30px 0;
+    border-top: 1px solid #eee;
+}
+
+.contact {
+    color: var(--secondary-color);
+}
+
+.contact a {
+    color: var(--accent-color);
+    text-decoration: none;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
     .container {
         padding: 20px;
@@ -144,5 +225,18 @@ header {
 
     .intro-text {
         font-size: 1.2rem;
+    }
+
+    .experience-item {
+        padding: 20px;
+    }
+
+    .company {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .duration {
+        margin-top: 5px;
     }
 }
