@@ -1,201 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teju Pamarty - Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teju Pamarty - Data & Analytics Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">TP</div>
-            <ul class="nav-menu">
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+  <div class="container">
+    <aside class="sidebar">
+      <div class="profile">
+        <div class="profile-img"><img src="profile.jpg" alt="Teju Pamarty"></div>
+        <h1>Teju Pamarty</h1>
+        <p>Data & Analytics Professional</p>
+      </div>
+      <ul class="nav">
+        <li><button class="active" onclick="showSection('about')">About</button></li>
+        <li><button onclick="showSection('career')">Career Journey</button></li>
+        <li><button onclick="showSection('data')">Data Engineering & Analytics</button></li>
+        <li><button onclick="showSection('viz')">Dashboards & Visualizations</button></li>
+        <li><button onclick="showSection('ai')">Gen AI & Advanced Analytics</button></li>
+        <li><button onclick="showSection('leadership')">Technical Leadership</button></li>
+        <li><a href="https://www.linkedin.com/in/tejudeeppamarty/" class="btn">LinkedIn</a></li>
+      </ul>
+    </aside>
+
+    <main class="content">
+      <section id="about" class="section active">
+        <div class="hero">
+          <h2>About Me</h2>
+          <p>A creative problem-solver with an insatiable curiosity and a unique approach to technical challenges. I believe in transforming problems into opportunities. I specialize in scalable analytics, cross-functional collaboration, and developing innovative solutions that generate real impact at scale.</p>
+          <p>I've worked with Amazon, PODS, Navistar, and Wells Fargo — delivering enterprise reporting, dashboard automation, fraud analytics, and leading AI adoption.</p>
         </div>
-    </nav>
+      </section>
 
-    <main>
-        <section class="hero">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1>Teju Pamarty</h1>
-                    <h2>Business Intelligence Engineer</h2>
-                    <p>Transforming complex data into actionable insights at Amazon</p>
-                    <div class="hero-buttons">
-                        <a href="#experience" class="btn btn-primary">View Experience</a>
-                        <a href="#contact" class="btn btn-secondary">Get in Touch</a>
-                    </div>
-                </div>
-            </div>
-        </section>
+      <section id="career" class="section">
+        <h2>Career Journey</h2>
+        <ul>
+          <li><strong>Amazon</strong> – Business Intelligence Engineer (2022 – Present)</li>
+          <li><strong>PODS</strong> – BI Lead (2021 – 2022)</li>
+          <li><strong>Navistar</strong> – BI Engineer (2018 – 2021)</li>
+          <li><strong>Wells Fargo</strong> – Data Analyst (2017 – 2018)</li>
+        </ul>
+      </section>
 
-        <section id="about" class="about">
-            <div class="container">
-                <h2 class="section-title">About</h2>
-                <p class="about-text">
-                    A creative problem-solver with an insatiable curiosity and a unique approach to technical challenges. 
-                    My professional philosophy is to find innovative, unconventional solutions that not only solve problems 
-                    but transform them into opportunities for efficiency and growth.
-                </p>
-                
-                <div class="stats">
-                    <div class="stat-item">
-                        <h3>$56K+</h3>
-                        <p>Annual Savings Generated</p>
-                    </div>
-                    <div class="stat-item">
-                        <h3>2,200+</h3>
-                        <p>Sites Scaled</p>
-                    </div>
-                    <div class="stat-item">
-                        <h3>15,000+</h3>
-                        <p>Users Supported</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+      <section id="data" class="section">
+        <h2>Data Engineering & Analytics</h2>
+        <ul>
+          <li>Expert in SQL, Python, AWS (Redshift, Athena, S3, Glue, Step Functions)</li>
+          <li>Built and optimized data pipelines serving 1.5M+ Amazon employees</li>
+          <li>Delivered reporting platform for 6 Amazon products, scaling to 2200+ sites</li>
+          <li>Detected $5M warranty fraud at Navistar via truck data analytics</li>
+        </ul>
+      </section>
 
-        <section id="experience" class="experience">
-            <div class="container">
-                <h2 class="section-title">Experience</h2>
-                
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-marker"></div>
-                        <div class="timeline-content">
-                            <div class="company-header">
-                                <h3>Amazon</h3>
-                                <span class="duration">2022 - Present</span>
-                            </div>
-                            <h4>Business Intelligence Engineer</h4>
-                            <ul>
-                                <li>Architected first-ever automated WBR system, eliminating 16+ hours of monthly manual reporting</li>
-                                <li>Developed unified analytics dashboard integrating 50+ metrics, generating $56K annual savings</li>
-                                <li>Led enterprise-wide reporting platform across 6 Amazon products with 85% manager adoption</li>
-                                <li>Scaled infrastructure from 15 to 2,200+ sites, optimizing data model by 90%</li>
-                            </ul>
-                        </div>
-                    </div>
+      <section id="viz" class="section">
+        <h2>Dashboards & Visualizations</h2>
+        <ul>
+          <li>Expert in Tableau, Power BI, Quicksight</li>
+          <li>Managed Tableau for 15,000+ users with enterprise security & automation</li>
+          <li>Migrated 150+ Tableau dashboards to Power BI in under 6 months</li>
+          <li>Created self-service dashboards saving 16 hours/week and $56K/year</li>
+        </ul>
+      </section>
 
-                    <div class="timeline-item">
-                        <div class="timeline-marker"></div>
-                        <div class="timeline-content">
-                            <div class="company-header">
-                                <h3>PODS</h3>
-                                <span class="duration">2021 - 2022</span>
-                            </div>
-                            <h4>Business Intelligence Lead</h4>
-                            <ul>
-                                <li>Deployed secure Tableau environment for 15,000 users with multi-layered security</li>
-                                <li>Implemented Tableau Bridge, reducing data refresh times by 60%</li>
-                            </ul>
-                        </div>
-                    </div>
+      <section id="ai" class="section">
+        <h2>Gen AI & Advanced Analytics</h2>
+        <ul>
+          <li>Built AI tools using Claude & Amazon Q for insight automation</li>
+          <li>Cut manual requests by 90% via Gen AI agents and auto-callouts</li>
+          <li>Contributed to internal Gen AI tools for scrum automation, doc creation, and summarization</li>
+        </ul>
+      </section>
 
-                    <div class="timeline-item">
-                        <div class="timeline-marker"></div>
-                        <div class="timeline-content">
-                            <div class="company-header">
-                                <h3>Navistar</h3>
-                                <span class="duration">2018 - 2021</span>
-                            </div>
-                            <h4>Business Intelligence Engineer</h4>
-                            <ul>
-                                <li>Created fraud-detection dashboards, preventing warranty abuse and saving $5M annually</li>
-                                <li>Led 8-member global team in Tableau-to-Power BI migration of 150+ dashboards</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item">
-                        <div class="timeline-marker"></div>
-                        <div class="timeline-content">
-                            <div class="company-header">
-                                <h3>Wells Fargo</h3>
-                                <span class="duration">2017 - 2018</span>
-                            </div>
-                            <h4>Data Analyst</h4>
-                            <ul>
-                                <li>Managed Tableau server for 5,000 users with optimized performance and security</li>
-                                <li>Created unified dashboards integrating 10+ data sources</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="projects" class="projects">
-            <div class="container">
-                <h2 class="section-title">Key Projects</h2>
-                <div class="project-grid">
-                    <div class="project-card">
-                        <h3>WBR/MBR Automation</h3>
-                        <p>Automated Weekly Business Review system reducing manual effort by 98.4%</p>
-                        <div class="project-tags">
-                            <span>AWS Glue</span>
-                            <span>Python</span>
-                            <span>Automation</span>
-                        </div>
-                    </div>
-                    
-                    <div class="project-card">
-                        <h3>Gen AI Productivity Metrics</h3>
-                        <p>Comprehensive dashboard tracking Gen AI adoption impact across engineering teams</p>
-                        <div class="project-tags">
-                            <span>AI Analytics</span>
-                            <span>Dashboard</span>
-                            <span>Metrics</span>
-                        </div>
-                    </div>
-                    
-                    <div class="project-card">
-                        <h3>Conversation Hub</h3>
-                        <p>Centralized platform consolidating 6 conversation products for 10MM annual conversations</p>
-                        <div class="project-tags">
-                            <span>Data Integration</span>
-                            <span>QuickSight</span>
-                            <span>Scale</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="contact">
-            <div class="container">
-                <h2 class="section-title">Let's Connect</h2>
-                <div class="contact-content">
-                    <p>Interested in discussing data solutions or opportunities?</p>
-                    <div class="contact-links">
-                        <a href="mailto:teju.deep00@gmail.com" class="contact-link">
-                            <i class="fas fa-envelope"></i>
-                            <span>teju.deep00@gmail.com</span>
-                        </a>
-                        <a href="https://www.linkedin.com/in/tejudeeppamarty/" class="contact-link">
-                            <i class="fab fa-linkedin"></i>
-                            <span>LinkedIn</span>
-                        </a>
-                        <a href="https://github.com/tejudeep" class="contact-link">
-                            <i class="fab fa-github"></i>
-                            <span>GitHub</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
+      <section id="leadership" class="section">
+        <h2>Technical Leadership</h2>
+        <ul>
+          <li>Led 8+ member cross-functional teams during major migrations</li>
+          <li>Presented Weekly Business Reviews to Amazon Directors and Leadership</li>
+          <li>Championed Gen AI initiatives across organization</li>
+        </ul>
+      </section>
     </main>
+  </div>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Teju Pamarty. Built with passion for data.</p>
-        </div>
-    </footer>
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+      document.querySelectorAll('.nav button').forEach(b => b.classList.remove('active'));
+      event.target.classList.add('active');
+    }
+  </script>
 </body>
 </html>
