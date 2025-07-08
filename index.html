@@ -44,7 +44,100 @@
       border-radius: 8px;
       margin-bottom: 0.5rem;
     }
-  </style>
+      .profile-img {
+      border: 4px solid #3b82f6;
+      border-radius: 9999px;
+      padding: 4px;
+      width: 120px;
+      height: 120px;
+      margin: 0 auto 1rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #3b82f6, #f97316);
+    }
+    .profile-img img {
+      border-radius: 9999px;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .skill-tag {
+      background: linear-gradient(135deg, #3b82f6, #f97316);
+      color: #fff;
+      padding: 0.3rem 0.7rem;
+      border-radius: 20px;
+      font-size: 0.875rem;
+      display: inline-block;
+      margin: 0.3rem 0.3rem 0.6rem 0;
+      font-weight: 500;
+    }
+    .project {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+      border: 1px solid #2d3748;
+      border-radius: 12px;
+      padding: 1.5rem;
+      background: #1e293b;
+    }
+    .project h3 {
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+    }
+    .project ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .project .stat {
+      font-weight: bold;
+      background: linear-gradient(135deg, #3b82f6, #f97316);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .project span {
+      display: inline-block;
+      font-size: 0.875rem;
+      color: #94a3b8;
+      margin-left: 0.5rem;
+    }
+    .project-details {
+      flex: 1;
+    }
+    .project-impact {
+      text-align: right;
+      white-space: nowrap;
+      font-size: 1.2rem;
+      font-weight: bold;
+      background: linear-gradient(135deg, #3b82f6, #f97316);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }  
+    .career-row, .education-row, .highlight-box-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+    .highlight-box-row .highlight-box {
+      flex: 1 1 45%;
+    }
+    .company-logo {
+      width: 50px;
+      height: 50px;
+      object-fit: contain;
+      border-radius: 8px;
+      margin-bottom: 0.5rem;
+      transition: transform 0.3s ease, filter 0.3s ease;
+      filter: grayscale(100%);
+    }
+    .company-logo:hover {
+      transform: scale(1.1);
+      filter: grayscale(0%);
+    }
+
 </head>
 <body>
   <div class="container">
@@ -102,18 +195,10 @@
           </div>
         </div>
 
-        <div class="highlight-box">
-          <h3>Data Engineering & Analytics</h3>
-          <p>Expert in SQL, Python, AWS (Redshift, Athena, S3, Glue, Step Functions). Built and optimized data pipelines serving 1.5M+ employees worldwide. Delivered enterprise-wide reporting platforms for 6 Amazon products, scaling from 15 to 2200+ sites. Identified warranty frauds at Navistar using advanced analytics, saving $5M.</p>
-        </div>
-        <div class="highlight-box">
-          <h3>Dashboards & Visualizations</h3>
-          <p>Expert in Tableau, Power BI, QuickSight. Architected and maintained secure Tableau environments for 15,000+ users. Led migration of 150+ dashboards to Power BI. Created self-service dashboards saving 56K annually and 16 hours/week of developer time.</p>
-        </div>
-        <div class="highlight-box">
-          <h3>Gen AI & Advanced Analytics</h3>
-          <p>Led Gen AI adoption using Claude and Amazon Q. Developed AI agents to automate insights, reduce manual dependencies by 90%, and generate documentation/ticket summaries. Played a key role in enhancing Amazon internal AI tools.</p>
-        </div>
+        <div class="highlight-box-row">
+  <div class="highlight-box">$1</div>
+  <div class="highlight-box">$2</div>
+</div>
         <div class="highlight-box">
           <h3>Technical Leadership</h3>
           <p>Led cross-functional teams of 8+ engineers through system rebuilds. Presented weekly business reviews to Amazon directors, rolled up to CEO. Owned performance tuning, dashboard strategy, and knowledge sharing.</p>
