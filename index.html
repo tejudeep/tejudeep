@@ -131,13 +131,13 @@
       border-radius: 8px;
       margin-bottom: 0.5rem;
       transition: transform 0.3s ease, filter 0.3s ease;
-      filter: grayscale(100%);
+      filter: none;
     }
     .company-logo:hover {
       transform: scale(1.1);
-      filter: grayscale(0%);
+      filter: none;
     }
-</style>
+
 </head>
 <body>
   <div class="container">
@@ -196,8 +196,21 @@
         </div>
 
         <div class="highlight-box-row">
-  <div class="highlight-box">$1</div>
-  <div class="highlight-box">$2</div>
+  <div class="highlight-box">
+    <h3>Data Engineering & Analytics</h3>
+    <p>Expert in SQL, Python, AWS (Redshift, Athena, S3, Glue, Step Functions). Built and optimized data pipelines serving 1.5M+ employees worldwide. Delivered enterprise-wide reporting platforms for 6 Amazon products, scaling from 15 to 2200+ sites and optimized data models by 90%. Identified warranty frauds using advanced analytics on Truck mileage and warranty coverage data at Navistar that led to $5M in savings.</p>
+  </div>
+  <div class="highlight-box">
+    <h3>Dashboards & Visualizations</h3>
+    <p>Expert in Tableau, Power BI, QuickSight. Architected, built, managed, and maintained secure robust Tableau environments for over 15,000+ users. Implemented row-level security enterprise-wide and built custom Bash scripts to automate Tableau server tasks and optimize performance. Migrated 150+ dashboards to Power BI leading a global team of 8 under 6 months.</p>
+  </div>
+</div>
+<div class="highlight-box-row">
+  <div class="highlight-box">
+    <h3>Gen AI & Advanced Analytics</h3>
+    <p>Used Claude and Amazon Q to generate agents that provide instant callouts and automate insights. Helped develop and enhance internal AI tools at Amazon for documentation, data dictionaries, summaries, and more. Led Gen AI adoption by building AI agents to automate daily manual tasks, reducing product and customer data requests by 90%.</p>
+  </div>
+  
 </div>
         <div class="highlight-box">
           <h3>Technical Leadership</h3>
@@ -248,62 +261,77 @@
       </section>
 
       <section id="projects" class="section">
-        <h2>Key Projects</h2>
+  <h2>Key Projects</h2>
+  <p>Showcasing impactful data engineering and analytics projects that delivered measurable business value.</p>
 
-        <div class="project">
-          <h3>📊 Enterprise Reporting Platform <span>Amazon • 2023–2024</span></h3>
-          <ul>
-            <li>Built scalable reporting across <span class="stat">2,200+</span> sites and 6 Amazon products</li>
-            <li><strong>🛠 Tools:</strong> Redshift, Athena, Tableau, QuickSight</li>
-            <li><strong>📈 Impact:</strong> Reduced processing time by <span class="stat">90%</span></li>
-          </ul>
+  <div class="project-card">
+    <div class="project-header">
+      <h3>Enterprise Reporting Platform</h3>
+      <span class="project-tag">Amazon • 2023–2024</span>
+    </div>
+    <div class="project-content">
+      <div class="project-description">
+        <p>Built scalable reporting across 2,200+ sites and 6 Amazon products. Reduced processing time by 90%.</p>
+        <div class="tech-stack">
+          <span class="tech-tag">Redshift</span>
+          <span class="tech-tag">Athena</span>
+          <span class="tech-tag">Tableau</span>
+          <span class="tech-tag">QuickSight</span>
         </div>
+      </div>
+      <div class="project-metrics">
+        <div class="metric-card">
+          <div class="metric-icon">📊</div>
+          <div class="metric-content">
+            <div class="metric-number">2,200+</div>
+            <div class="metric-label">Sites Supported</div>
+          </div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-icon">⚡</div>
+          <div class="metric-content">
+            <div class="metric-number">90%</div>
+            <div class="metric-label">Faster Performance</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-        <div class="project">
-          <h3>🧠 Gen AI Dashboards <span>Amazon • 2024</span></h3>
-          <ul>
-            <li>Reduced manual effort by <span class="stat">90%</span> with AI-generated insights and workflows</li>
-            <li><strong>🛠 Tools:</strong> Amazon Q, Claude, Python, AWS</li>
-            <li><strong>💰 Savings:</strong> <span class="stat">$56,000/year</span></li>
-          </ul>
+  <div class="project-card">
+    <div class="project-header">
+      <h3>Gen AI Dashboards</h3>
+      <span class="project-tag">Amazon • 2024</span>
+    </div>
+    <div class="project-content">
+      <div class="project-description">
+        <p>Reduced manual effort by 90% with AI-generated insights and workflows. Delivered $56K in annual productivity savings.</p>
+        <div class="tech-stack">
+          <span class="tech-tag">Amazon Q</span>
+          <span class="tech-tag">Claude</span>
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">AWS</span>
         </div>
-
-        <div class="project">
-          <h3>🚚 Warranty Fraud Detection <span>Navistar • 2020</span></h3>
-          <ul>
-            <li>Uncovered <span class="stat">$5M+</span> in warranty fraud via analytics on mileage and service data</li>
-            <li><strong>🛠 Tools:</strong> SQL, Hive, Tableau</li>
-            <li><strong>📊 Result:</strong> Created fraud alert models to protect revenue</li>
-          </ul>
+      </div>
+      <div class="project-metrics">
+        <div class="metric-card">
+          <div class="metric-icon">🤖</div>
+          <div class="metric-content">
+            <div class="metric-number">90%</div>
+            <div class="metric-label">Manual Tasks Cut</div>
+          </div>
         </div>
-
-        <div class="project">
-          <h3>📈 Tableau to Power BI Migration <span>PODS • 2022</span></h3>
-          <ul>
-            <li>Led global team of 8 to migrate <span class="stat">150+</span> Tableau dashboards to Power BI</li>
-            <li><strong>🛠 Tools:</strong> Tableau, Power BI, Bash</li>
-            <li><strong>📉 Time Savings:</strong> Completed in under 6 months</li>
-          </ul>
+        <div class="metric-card">
+          <div class="metric-icon">💰</div>
+          <div class="metric-content">
+            <div class="metric-number">$56K</div>
+            <div class="metric-label">Savings / Year</div>
+          </div>
         </div>
-
-        <div class="project">
-          <h3>🧪 Self-Service Dashboards <span>PODS • 2022</span></h3>
-          <ul>
-            <li>Built from scratch a tool saving <span class="stat">16 hours/week</span> for analysts</li>
-            <li><strong>🛠 Tools:</strong> SQL, Tableau, Python</li>
-            <li><strong>💡 Value:</strong> <span class="stat">$56K/year</span> productivity savings</li>
-          </ul>
-        </div>
-
-        <div class="project">
-          <h3>📅 Ticket Metrics Automation <span>Amazon • 2024</span></h3>
-          <ul>
-            <li>Automated data quality and scrum updates using Amazon Q agents</li>
-            <li><strong>🛠 Tools:</strong> Amazon Q, Python, Redshift</li>
-            <li><strong>🚀 Result:</strong> 90% fewer manual ticket metrics requests</li>
-          </ul>
-        </div>
-      </section>
+      </div>
+    </div>
+  </div>
+</section>
     </main>
   </div>
 
