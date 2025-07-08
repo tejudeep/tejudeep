@@ -542,80 +542,34 @@
       color: #94a3b8;
       font-size: 0.9rem;
     }
-    /* Mobile Skills Styling - Hidden on Desktop */
-    .mobile-skills {
-      display: none; /* Hidden on desktop */
-      margin-bottom: 3rem;
-    }
 
-    .mobile-skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1.5rem;
-    }
-
-    .mobile-skill-category {
-      background: linear-gradient(135deg, #334155 0%, #475569 100%);
-      padding: 1.5rem;
-      border-radius: 12px;
-      border: 1px solid #475569;
-      transition: all 0.3s ease;
-    }
-
-    .mobile-skill-category:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 20px rgba(59, 130, 246, 0.15);
-    }
-
-    .mobile-skill-category h4 {
-      color: #e2e8f0;
-      font-size: 1rem;
-      margin-bottom: 0.75rem;
-      font-weight: 600;
-    }
-
-    .mobile-skill-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-    }
-
-    .mobile-skill-tag {
-      background: linear-gradient(135deg, #3b82f6 0%, #f97316 100%);
-      color: white;
-      padding: 0.4rem 0.8rem;
-      border-radius: 20px;
-      font-size: 0.85rem;
-      font-weight: 500;
-      transition: all 0.3s ease;
-      cursor: default;
-      box-shadow: 0 2px 4px rgba(59, 130, 246, 0.2);
-    }
-
-    .mobile-skill-tag:hover {
-      transform: translateY(-2px) scale(1.05);
-      box-shadow: 0 5px 15px rgba(59, 130, 246, 0.3);
-    }
-
-    /* Light mode overrides for mobile skills */
-    [data-theme="light"] .mobile-skill-category {
-      background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-      border: 1px solid #e2e8f0;
-    }
-
-    [data-theme="light"] .mobile-skill-category h4 {
-      color: #1e293b;
-    }
-      /* ADD THESE NEW RULES */
-      .sidebar-skills {
-        display: none; /* Hide sidebar skills on mobile */
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
       }
       
-      .mobile-skills {
-        display: block; /* Show mobile skills on mobile */
+      .sidebar {
+        width: 100%;
+        padding: 1.5rem;
       }
-      /* END NEW RULES */
+      
+      .nav {
+        display: flex;
+        gap: 0.5rem;
+        overflow-x: auto;
+        margin-bottom: 1rem;
+      }
+      
+      .nav li {
+        margin-bottom: 0;
+        min-width: fit-content;
+      }
 
+      .sidebar-skills {
+        border-top: none;
+        padding-top: 0;
+      }
+      
       .content {
         padding: 2rem 1.5rem;
       }
@@ -681,40 +635,10 @@
       --bg-sidebar: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
       --bg-card: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
       --bg-skill: linear-gradient(135deg, #e2e8f0 0%, #cbd5e1 100%);
-      --text-primary: #0f172a;        /* Much darker - almost black */
-      --text-secondary: #1e293b;      /* Much darker for intro text */
-      --text-muted: #334155;          /* Much darker for menu items */
+      --text-primary: #1e293b;
+      --text-secondary: #475569;
+      --text-muted: #64748b;
       --border-color: #e2e8f0;
-    }
-    /* Light mode specific overrides for better visibility */
-    [data-theme="light"] .section > p {
-      color: #1e293b !important;  /* Make intro text very dark */
-    }
-
-    [data-theme="light"] .nav button, 
-    [data-theme="light"] .nav a {
-      color: #334155 !important;  /* Make menu items darker */
-    }
-
-    [data-theme="light"] .nav button:hover, 
-    [data-theme="light"] .nav button.active, 
-    [data-theme="light"] .nav a:hover {
-      color: white !important;    /* Keep hover effect white */
-    }
-
-    [data-theme="light"] .sidebar-skill-category h4 {
-      color: #1e293b !important;  /* Make skill headings very dark */
-    }
-
-    [data-theme="light"] .profile p {
-      color: #475569 !important;  /* Make profile subtitle darker */
-    }
-
-    [data-theme="light"] .companies-header h3,
-    [data-theme="light"] .projects-header h3 {
-      background: linear-gradient(135deg, #3b82f6 0%, #f97316 100%) !important;
-      -webkit-background-clip: text !important;
-      -webkit-text-fill-color: transparent !important;
     }
   </style>
 </head>
@@ -831,67 +755,7 @@
             </div>
           </div>
         </div>
-        </div> <!-- End of companies-grid -->
 
-        <div class="mobile-skills">
-          <div class="companies-header">
-            <h3>Technical Skills</h3>
-          </div>
-          
-          <div class="mobile-skills-grid">
-            <div class="mobile-skill-category">
-              <h4>Programming & Querying</h4>
-              <div class="mobile-skill-tags">
-                <span class="mobile-skill-tag">SQL</span>
-                <span class="mobile-skill-tag">Python</span>
-                <span class="mobile-skill-tag">Hive</span>
-                <span class="mobile-skill-tag">PySpark</span>
-                <span class="mobile-skill-tag">Scala</span>
-              </div>
-            </div>
-            
-            <div class="mobile-skill-category">
-              <h4>Cloud & Data Platforms</h4>
-              <div class="mobile-skill-tags">
-                <span class="mobile-skill-tag">AWS</span>
-                <span class="mobile-skill-tag">Redshift</span>
-                <span class="mobile-skill-tag">Spark</span>
-                <span class="mobile-skill-tag">Snowflake</span>
-                <span class="mobile-skill-tag">Hadoop</span>
-                <span class="mobile-skill-tag">CloudFormation</span>
-                <span class="mobile-skill-tag">Teradata</span>
-              </div>
-            </div>
-            
-            <div class="mobile-skill-category">
-              <h4>Dashboards & BI Tools</h4>
-              <div class="mobile-skill-tags">
-                <span class="mobile-skill-tag">Tableau</span>
-                <span class="mobile-skill-tag">Power BI</span>
-                <span class="mobile-skill-tag">QuickSight</span>
-                <span class="mobile-skill-tag">Excel</span>
-                <span class="mobile-skill-tag">SSRS</span>
-                <span class="mobile-skill-tag">Kibana</span>
-              </div>
-            </div>
-            
-            <div class="mobile-skill-category">
-              <h4>Data Engineering & Automation</h4>
-              <div class="mobile-skill-tags">
-                <span class="mobile-skill-tag">PySpark</span>
-                <span class="mobile-skill-tag">Hive</span>
-                <span class="mobile-skill-tag">SSAS</span>
-                <span class="mobile-skill-tag">RDBMS</span>
-                <span class="mobile-skill-tag">Git</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- END MOBILE SKILLS SECTION -->
-
-        <div class="projects-header">
-          <h3>Key Projects</h3>
-        </div>
         <div class="projects-header">
           <h3>Key Projects</h3>
         </div>
