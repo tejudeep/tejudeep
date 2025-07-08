@@ -1214,32 +1214,39 @@
     
     // Theme Toggle Functionality
     const themeSwitch = document.getElementById('theme-switch');
-    const themeText = document.querySelector('.theme-text');
-
+    const themeIcon = document.querySelector('.theme-icon');
+    
     // Check for saved theme preference or default to dark mode
     const currentTheme = localStorage.getItem('theme') || 'dark';
     document.documentElement.setAttribute('data-theme', currentTheme);
-
-    // Update toggle state and text
+    
+    // Update toggle state and icon
     if (currentTheme === 'light') {
-      themeSwitch.checked = true;
-      themeText.textContent = '☀️ Light Mode';
+        themeSwitch.checked = true;
+        themeIcon.textContent = '☀️';
     } else {
-      themeText.textContent = '🌙 Dark Mode';
+        themeSwitch.checked = false;  // Make sure it's unchecked for dark mode
+        themeIcon.textContent = '🌙';
     }
-
+    
     // Theme switch event listener
     themeSwitch.addEventListener('change', function() {
-      if (this.checked) {
-        document.documentElement.setAttribute('data-theme', 'light');
-        localStorage.setItem('theme', 'light');
-        themeText.textContent = '☀️ Light Mode';
-      } else {
-        document.documentElement.setAttribute('data-theme', 'dark');
-        localStorage.setItem('theme', 'dark');
-        themeText.textContent = '🌙 Dark Mode';
-      }
+        if (this.checked) {
+            document.documentElement.setAttribute('data-theme', 'light');
+            localStorage.setItem('theme', 'light');
+            themeIcon.textContent = '☀️';
+        } else {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            localStorage.setItem('theme', 'dark');
+            themeIcon.textContent = '🌙';
+        }
     });
+    
+    // Set initial dark mode on page load
+    if (!localStorage.getItem('theme')) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        themeIcon.textContent = '🌙';
+    }
      
   </script>
 </body>
