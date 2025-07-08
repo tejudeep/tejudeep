@@ -1,4 +1,13 @@
-/* Global styles */
+
+.nav li {
+  margin-bottom: 0.5rem;
+}
+
+.nav button,
+.nav a.btn {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: transparent;/* Global styles */
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -33,7 +42,8 @@ body {
   width: 120px;
   height: 120px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #3b82f6 0%, #f97316 100%);
+  background: conic-gradient(from 0deg at 50% 50%, #f97316, #3b82f6, #10b981, #f59e0b, #f97316);
+  padding: 4px;
   margin: 0 auto 1rem;
   display: flex;
   align-items: center;
@@ -66,15 +76,6 @@ body {
   margin-bottom: auto;
 }
 
-.nav li {
-  margin-bottom: 0.5rem;
-}
-
-.nav button,
-.nav a.btn {
-  width: 100%;
-  padding: 0.75rem 1rem;
-  background: transparent;
   border: none;
   color: #94a3b8;
   text-align: left;
@@ -82,7 +83,9 @@ body {
   border-radius: 8px;
   transition: all 0.3s ease;
   font-size: 0.95rem;
-  display: block;
+  display: flex;
+  align-items: center;
+  gap: 8px;
   text-decoration: none;
 }
 
@@ -129,6 +132,36 @@ li {
   color: #cbd5e1;
 }
 
+.project {
+  background: #1e293b;
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.project:hover {
+  transform: translateY(-5px);
+}
+
+.project h3 span {
+  float: right;
+  color: #fbbf24;
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+
+.project ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.project li {
+  margin-bottom: 0.6rem;
+  color: #d1d5db;
+}
+
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
@@ -137,4 +170,18 @@ li {
 @keyframes pulse {
   0%, 100% { transform: scale(1); }
   50% { transform: scale(1.05); }
+}
+
+.stat {
+  font-size: 2rem;
+  font-weight: bold;
+  background: linear-gradient(90deg, #3b82f6, #10b981);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: countup 2s ease-in-out;
+}
+
+@keyframes countup {
+  0% { opacity: 0; transform: scale(0.9); }
+  100% { opacity: 1; transform: scale(1); }
 }
