@@ -649,6 +649,36 @@
       --text-muted: #64748b;
       --border-color: #e2e8f0;
     }
+        /* Light mode specific overrides for better visibility */
+    [data-theme="light"] .section > p {
+      color: #1e293b !important;  /* Make intro text very dark */
+    }
+
+    [data-theme="light"] .nav button, 
+    [data-theme="light"] .nav a {
+      color: #334155 !important;  /* Make menu items darker */
+    }
+
+    [data-theme="light"] .nav button:hover, 
+    [data-theme="light"] .nav button.active, 
+    [data-theme="light"] .nav a:hover {
+      color: white !important;    /* Keep hover effect white */
+    }
+
+    [data-theme="light"] .sidebar-skill-category h4 {
+      color: #1e293b !important;  /* Make skill headings very dark */
+    }
+
+    [data-theme="light"] .profile p {
+      color: #475569 !important;  /* Make profile subtitle darker */
+    }
+
+    [data-theme="light"] .companies-header h3,
+    [data-theme="light"] .projects-header h3 {
+      background: linear-gradient(135deg, #3b82f6 0%, #f97316 100%) !important;
+      -webkit-background-clip: text !important;
+      -webkit-text-fill-color: transparent !important;
+    }
   </style>
 </head>
 <body>
@@ -765,6 +795,58 @@
           </div>
         </div>
 
+        <!-- ADD MOBILE SKILLS AT BOTTOM -->
+        <div class="sidebar-skills mobile-bottom">
+          <h3>Technical Skills</h3>
+          
+          <div class="sidebar-skill-category">
+            <h4>Programming & Querying</h4>
+            <div class="sidebar-skill-tags">
+              <span class="sidebar-skill-tag">SQL</span>
+              <span class="sidebar-skill-tag">Python</span>
+              <span class="sidebar-skill-tag">Hive</span>
+              <span class="sidebar-skill-tag">PySpark</span>
+              <span class="sidebar-skill-tag">Scala</span>
+            </div>
+          </div>
+          
+          <div class="sidebar-skill-category">
+            <h4>Cloud & Data Platforms</h4>
+            <div class="sidebar-skill-tags">
+              <span class="sidebar-skill-tag">AWS</span>
+              <span class="sidebar-skill-tag">Redshift</span>
+              <span class="sidebar-skill-tag">Spark</span>
+              <span class="sidebar-skill-tag">Snowflake</span>
+              <span class="sidebar-skill-tag">Hadoop</span>
+              <span class="sidebar-skill-tag">CloudFormation</span>
+              <span class="sidebar-skill-tag">Teradata</span>
+            </div>
+          </div>
+          
+          <div class="sidebar-skill-category">
+            <h4>Dashboards & BI Tools</h4>
+            <div class="sidebar-skill-tags">
+              <span class="sidebar-skill-tag">Tableau</span>
+              <span class="sidebar-skill-tag">Power BI</span>
+              <span class="sidebar-skill-tag">QuickSight</span>
+              <span class="sidebar-skill-tag">Excel</span>
+              <span class="sidebar-skill-tag">SSRS</span>
+              <span class="sidebar-skill-tag">Kibana</span>
+            </div>
+          </div>
+          
+          <div class="sidebar-skill-category">
+            <h4>Data Engineering & Automation</h4>
+            <div class="sidebar-skill-tags">
+              <span class="sidebar-skill-tag">PySpark</span>
+              <span class="sidebar-skill-tag">Hive</span>
+              <span class="sidebar-skill-tag">SSAS</span>
+              <span class="sidebar-skill-tag">RDBMS</span>
+              <span class="sidebar-skill-tag">Git</span>
+            </div>
+          </div>
+        </div>  
+        
         <div class="projects-header">
           <h3>Key Projects</h3>
         </div>
@@ -1054,58 +1136,7 @@
             <h4>Jawaharlal Nehru Technological University</h4>
             <span>Bachelor's, Electronics and Instrumentation Engineering • 2011 – 2015</span>
           </div>
-        </div>
-        <!-- ADD MOBILE SKILLS AT BOTTOM -->
-        <div class="sidebar-skills mobile-bottom">
-          <h3>Technical Skills</h3>
-          
-          <div class="sidebar-skill-category">
-            <h4>Programming & Querying</h4>
-            <div class="sidebar-skill-tags">
-              <span class="sidebar-skill-tag">SQL</span>
-              <span class="sidebar-skill-tag">Python</span>
-              <span class="sidebar-skill-tag">Hive</span>
-              <span class="sidebar-skill-tag">PySpark</span>
-              <span class="sidebar-skill-tag">Scala</span>
-            </div>
-          </div>
-          
-          <div class="sidebar-skill-category">
-            <h4>Cloud & Data Platforms</h4>
-            <div class="sidebar-skill-tags">
-              <span class="sidebar-skill-tag">AWS</span>
-              <span class="sidebar-skill-tag">Redshift</span>
-              <span class="sidebar-skill-tag">Spark</span>
-              <span class="sidebar-skill-tag">Snowflake</span>
-              <span class="sidebar-skill-tag">Hadoop</span>
-              <span class="sidebar-skill-tag">CloudFormation</span>
-              <span class="sidebar-skill-tag">Teradata</span>
-            </div>
-          </div>
-          
-          <div class="sidebar-skill-category">
-            <h4>Dashboards & BI Tools</h4>
-            <div class="sidebar-skill-tags">
-              <span class="sidebar-skill-tag">Tableau</span>
-              <span class="sidebar-skill-tag">Power BI</span>
-              <span class="sidebar-skill-tag">QuickSight</span>
-              <span class="sidebar-skill-tag">Excel</span>
-              <span class="sidebar-skill-tag">SSRS</span>
-              <span class="sidebar-skill-tag">Kibana</span>
-            </div>
-          </div>
-          
-          <div class="sidebar-skill-category">
-            <h4>Data Engineering & Automation</h4>
-            <div class="sidebar-skill-tags">
-              <span class="sidebar-skill-tag">PySpark</span>
-              <span class="sidebar-skill-tag">Hive</span>
-              <span class="sidebar-skill-tag">SSAS</span>
-              <span class="sidebar-skill-tag">RDBMS</span>
-              <span class="sidebar-skill-tag">Git</span>
-            </div>
-          </div>
-        </div>   
+        </div> 
       </section>
     </main>
       </section>
