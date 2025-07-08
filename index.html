@@ -565,10 +565,19 @@
         min-width: fit-content;
       }
 
+      /* MOVE SKILLS TO BOTTOM */
       .sidebar-skills {
-        border-top: none;
-        padding-top: 0;
+        display: none; /* Hide from sidebar */
       }
+      
+      /* Show skills at bottom of main content */
+      .sidebar-skills.mobile-bottom {
+        display: block;
+        margin-top: 2rem;
+        border-top: 1px solid var(--border-color);
+        padding-top: 2rem;
+      }
+      /* END */
       
       .content {
         padding: 2rem 1.5rem;
@@ -1046,6 +1055,59 @@
             <span>Bachelor's, Electronics and Instrumentation Engineering • 2011 – 2015</span>
           </div>
         </div>
+        <!-- ADD MOBILE SKILLS AT BOTTOM -->
+        <div class="sidebar-skills mobile-bottom">
+          <h3>Technical Skills</h3>
+          
+          <div class="sidebar-skill-category">
+            <h4>Programming & Querying</h4>
+            <div class="sidebar-skill-tags">
+              <span class="sidebar-skill-tag">SQL</span>
+              <span class="sidebar-skill-tag">Python</span>
+              <span class="sidebar-skill-tag">Hive</span>
+              <span class="sidebar-skill-tag">PySpark</span>
+              <span class="sidebar-skill-tag">Scala</span>
+            </div>
+          </div>
+          
+          <div class="sidebar-skill-category">
+            <h4>Cloud & Data Platforms</h4>
+            <div class="sidebar-skill-tags">
+              <span class="sidebar-skill-tag">AWS</span>
+              <span class="sidebar-skill-tag">Redshift</span>
+              <span class="sidebar-skill-tag">Spark</span>
+              <span class="sidebar-skill-tag">Snowflake</span>
+              <span class="sidebar-skill-tag">Hadoop</span>
+              <span class="sidebar-skill-tag">CloudFormation</span>
+              <span class="sidebar-skill-tag">Teradata</span>
+            </div>
+          </div>
+          
+          <div class="sidebar-skill-category">
+            <h4>Dashboards & BI Tools</h4>
+            <div class="sidebar-skill-tags">
+              <span class="sidebar-skill-tag">Tableau</span>
+              <span class="sidebar-skill-tag">Power BI</span>
+              <span class="sidebar-skill-tag">QuickSight</span>
+              <span class="sidebar-skill-tag">Excel</span>
+              <span class="sidebar-skill-tag">SSRS</span>
+              <span class="sidebar-skill-tag">Kibana</span>
+            </div>
+          </div>
+          
+          <div class="sidebar-skill-category">
+            <h4>Data Engineering & Automation</h4>
+            <div class="sidebar-skill-tags">
+              <span class="sidebar-skill-tag">PySpark</span>
+              <span class="sidebar-skill-tag">Hive</span>
+              <span class="sidebar-skill-tag">SSAS</span>
+              <span class="sidebar-skill-tag">RDBMS</span>
+              <span class="sidebar-skill-tag">Git</span>
+            </div>
+          </div>
+        </div>   
+      </section>
+    </main>
       </section>
     </main>
   </div>
