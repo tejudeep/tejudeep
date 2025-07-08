@@ -148,6 +148,15 @@
       margin-bottom: 2rem;
     }
 
+    /* Highlight numbers in text */
+    .highlight-number {
+      background: linear-gradient(135deg, #3b82f6 0%, #f97316 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      font-weight: 600;
+    }
+
     /* Companies Grid */
     .companies-header {
       text-align: left;
@@ -183,6 +192,7 @@
       display: flex;
       align-items: center;
       gap: 1rem;
+      min-height: 100px; /* Ensure consistent height */
     }
 
     .company-item::before {
@@ -212,10 +222,12 @@
       border-radius: 8px;
       background: white;
       padding: 8px;
+      flex-shrink: 0; /* Prevent logo from shrinking */
     }
 
     .company-info {
       flex: 1;
+      min-width: 0; /* Allow text to wrap */
     }
 
     .company-info h4 {
@@ -223,11 +235,14 @@
       font-size: 1.1rem;
       font-weight: 600;
       margin-bottom: 0.25rem;
+      line-height: 1.2;
     }
 
     .company-info span {
       color: #94a3b8;
       font-size: 0.9rem;
+      line-height: 1.3;
+      display: block;
     }
 
     /* Skills Grid */
@@ -545,8 +560,8 @@
 
     <main class="content">
       <section id="home" class="section active">
-        <h2>Product, Analytics & Data Engineer</h2>
-        <p>A creative problem-solver with an insatiable curiosity and a unique approach to technical challenges. I've worked with companies from startups to Fortune 100 firms like Amazon, PODS, Navistar, and Wells Fargo.</p>
+        <h2>Data & Analytics Professional</h2>
+        <p>A creative problem-solver with an insatiable curiosity and a unique approach to technical challenges. My professional philosophy is to find innovative, unconventional solutions that not only solve problems but transform them into opportunities for efficiency and growth. I've worked with companies from startups to Fortune 100 firms like Amazon, PODS, Navistar, and Wells Fargo to build and transform the analytical solutions for a better future and impact. I enjoy working cross-functionally with software, product, program, and science teams to drive impact at scale.</p>
 
         <div class="companies-header">
           <h3>Career Journey</h3>
@@ -556,28 +571,28 @@
             <img src="amazon.png" alt="Amazon Logo" class="company-logo">
             <div class="company-info">
               <h4>Amazon</h4>
-              <span>Business Intelligence Engineer • 2022 – Present</span>
+              <span>Business Intelligence Engineer<br>September 2022 – Present</span>
             </div>
           </div>
           <div class="company-item">
             <img src="pods.png" alt="PODS Logo" class="company-logo">
             <div class="company-info">
               <h4>PODS</h4>
-              <span>BI Lead • 2021 – 2022</span>
+              <span>Business Intelligence Lead<br>June 2021 – September 2022</span>
             </div>
           </div>
           <div class="company-item">
             <img src="navistar.png" alt="Navistar Logo" class="company-logo">
             <div class="company-info">
               <h4>Navistar</h4>
-              <span>BI Engineer • 2018 – 2021</span>
+              <span>Business Intelligence Engineer<br>February 2018 – June 2021</span>
             </div>
           </div>
           <div class="company-item">
             <img src="wells.png" alt="Wells Fargo Logo" class="company-logo">
             <div class="company-info">
               <h4>Wells Fargo</h4>
-              <span>Data Analyst • 2017 – 2018</span>
+              <span>Data Analyst<br>July 2017 – January 2018</span>
             </div>
           </div>
         </div>
@@ -585,19 +600,19 @@
         <div class="skills-grid">
           <div class="skill-card">
             <h3>Data Engineering & Analytics</h3>
-            <p>Expert in SQL, Python, AWS (Redshift, Athena, S3, Glue, Step Functions). Built and optimized data pipelines serving 1.5M+ employees worldwide. Delivered enterprise-wide reporting platforms for 6 Amazon products, scaling from 15 to 2200+ sites and optimized data models by 90%.</p>
+            <p>Expert in SQL, Python, AWS (Redshift, Athena, S3, Glue, Step Functions). Built and optimized data pipelines serving <span class="highlight-number">1.5M+ employees</span> worldwide. Delivered enterprise-wide reporting platforms for <span class="highlight-number">6 Amazon products</span>, scaling from <span class="highlight-number">15 to 2200+ sites</span> and optimized data models by <span class="highlight-number">90%</span>.</p>
           </div>
           <div class="skill-card">
             <h3>Dashboards & Visualizations</h3>
-            <p>Expert in Tableau, Power BI, QuickSight. Architected, built, managed, and maintained secure robust Tableau environments for over 15,000+ users. Implemented row-level security enterprise-wide and built custom Bash scripts to automate Tableau server tasks.</p>
+            <p>Expert in Tableau, Power BI, QuickSight. Architected, built, managed, and maintained secure robust Tableau environments for over <span class="highlight-number">15,000+ users</span>. Implemented row-level security enterprise-wide and built custom Bash scripts to automate Tableau server tasks. Migrated <span class="highlight-number">150+ dashboards</span> to Power BI leading a global team of <span class="highlight-number">8</span> under <span class="highlight-number">6 months</span>.</p>
           </div>
           <div class="skill-card">
             <h3>Gen AI & Advanced Analytics</h3>
-            <p>Used Claude and Amazon Q to generate agents that provide instant callouts and automate insights. Helped develop and enhance internal AI tools at Amazon for documentation, data dictionaries, summaries, and more.</p>
+            <p>Used Claude and Amazon Q to generate agents that provide instant callouts and automate insights. Helped develop and enhance internal AI tools at Amazon for documentation, data dictionaries, summaries, and more. Led Gen AI adoption by building AI agents to automate daily manual tasks, reducing product and customer data requests by <span class="highlight-number">90%</span>.</p>
           </div>
           <div class="skill-card">
             <h3>Technical Leadership</h3>
-            <p>Led cross-functional teams of 8+ engineers through system rebuilds. Presented weekly business reviews to Amazon directors, rolled up to CEO. Owned performance tuning, dashboard strategy, and knowledge sharing.</p>
+            <p>Led cross-functional teams of <span class="highlight-number">8+ engineers</span> through system rebuilds. Presented weekly business reviews to Amazon directors, rolled up to CEO. Owned performance tuning, dashboard strategy, and knowledge sharing. Delivered <span class="highlight-number">$56K annual</span> cost savings through automation.</p>
           </div>
         </div>
 
@@ -622,6 +637,8 @@
                 <span class="skill-tag">Spark</span>
                 <span class="skill-tag">Snowflake</span>
                 <span class="skill-tag">Hadoop</span>
+                <span class="skill-tag">CloudFormation</span>
+                <span class="skill-tag">Teradata</span>
               </div>
             </div>
             <div class="skill-category">
@@ -632,14 +649,16 @@
                 <span class="skill-tag">QuickSight</span>
                 <span class="skill-tag">Excel</span>
                 <span class="skill-tag">SSRS</span>
+                <span class="skill-tag">Kibana</span>
               </div>
             </div>
             <div class="skill-category">
               <h4>Data Engineering & Automation</h4>
               <div class="skill-tags">
-                <span class="skill-tag">DBT</span>
-                <span class="skill-tag">Airflow</span>
+                <span class="skill-tag">PySpark</span>
+                <span class="skill-tag">Hive</span>
                 <span class="skill-tag">SSAS</span>
+                <span class="skill-tag">RDBMS</span>
                 <span class="skill-tag">Git</span>
               </div>
             </div>
@@ -667,33 +686,33 @@
 
         <div class="project-card">
           <div class="project-header">
-            <h3>Enterprise Reporting Platform</h3>
+            <h3>Automated Weekly Business Review System</h3>
             <span class="project-tag">Amazon • 2023–2024</span>
           </div>
           <div class="project-content">
             <div class="project-description">
-              <p>Built scalable reporting across 2,200+ sites and 6 Amazon products. Optimized data models and reduced processing time by 90% through strategic architecture improvements.</p>
+              <p>Architected and implemented first-ever automated Weekly Business Review (WBR) system featuring dynamic trend analysis and WoW comparisons, eliminating manual reporting effort and improving data accuracy.</p>
               <div class="tech-stack">
                 <span class="tech-tag">AWS Redshift</span>
-                <span class="tech-tag">Athena</span>
+                <span class="tech-tag">Python</span>
                 <span class="tech-tag">Tableau</span>
-                <span class="tech-tag">QuickSight</span>
                 <span class="tech-tag">SQL</span>
+                <span class="tech-tag">Automation</span>
               </div>
             </div>
             <div class="project-metrics">
               <div class="metric-card">
-                <div class="metric-icon">📊</div>
+                <div class="metric-icon">⏰</div>
                 <div class="metric-content">
-                  <div class="metric-number">2,200+</div>
-                  <div class="metric-label">Sites Supported</div>
+                  <div class="metric-number">16+</div>
+                  <div class="metric-label">Hours Saved Monthly</div>
                 </div>
               </div>
               <div class="metric-card">
-                <div class="metric-icon">⚡</div>
+                <div class="metric-icon">📊</div>
                 <div class="metric-content">
-                  <div class="metric-number">90%</div>
-                  <div class="metric-label">Faster Performance</div>
+                  <div class="metric-number">100%</div>
+                  <div class="metric-label">Automation Rate</div>
                 </div>
               </div>
             </div>
@@ -702,26 +721,26 @@
 
         <div class="project-card">
           <div class="project-header">
-            <h3>Gen AI Automation Platform</h3>
+            <h3>Unified Analytics Dashboard</h3>
             <span class="project-tag">Amazon • 2024</span>
           </div>
           <div class="project-content">
             <div class="project-description">
-              <p>Implemented AI agents using Claude and Amazon Q to automate insights generation and reduce manual data requests by 90%. Delivered significant productivity improvements across the organization.</p>
+              <p>Developed unified analytics dashboard integrating 50+ metrics, leveraging Gen AI to reduce manual data requests and generate significant annual cost savings with self-service capabilities.</p>
               <div class="tech-stack">
                 <span class="tech-tag">Amazon Q</span>
-                <span class="tech-tag">Claude</span>
+                <span class="tech-tag">Gen AI</span>
                 <span class="tech-tag">Python</span>
                 <span class="tech-tag">AWS</span>
-                <span class="tech-tag">Gen AI</span>
+                <span class="tech-tag">QuickSight</span>
               </div>
             </div>
             <div class="project-metrics">
               <div class="metric-card">
-                <div class="metric-icon">🤖</div>
+                <div class="metric-icon">📈</div>
                 <div class="metric-content">
-                  <div class="metric-number">90%</div>
-                  <div class="metric-label">Manual Tasks Reduced</div>
+                  <div class="metric-number">50+</div>
+                  <div class="metric-label">Metrics Integrated</div>
                 </div>
               </div>
               <div class="metric-card">
@@ -737,32 +756,135 @@
 
         <div class="project-card">
           <div class="project-header">
-            <h3>Tableau Server Migration</h3>
-            <span class="project-tag">PODS • 2021–2022</span>
+            <h3>Enterprise Reporting Platform</h3>
+            <span class="project-tag">Amazon • 2022–2024</span>
           </div>
           <div class="project-content">
             <div class="project-description">
-              <p>Led migration of 150+ dashboards to Power BI while managing global team of 8 engineers. Implemented enterprise-wide security and automated server optimization processes.</p>
+              <p>Led enterprise-wide reporting platform implementation across 6 Amazon products, driving high manager adoption and significant daily time savings while scaling massively and optimizing data models.</p>
+              <div class="tech-stack">
+                <span class="tech-tag">AWS Redshift</span>
+                <span class="tech-tag">Athena</span>
+                <span class="tech-tag">Tableau</span>
+                <span class="tech-tag">QuickSight</span>
+                <span class="tech-tag">Data Modeling</span>
+              </div>
+            </div>
+            <div class="project-metrics">
+              <div class="metric-card">
+                <div class="metric-icon">🏢</div>
+                <div class="metric-content">
+                  <div class="metric-number">2,200+</div>
+                  <div class="metric-label">Sites Scaled</div>
+                </div>
+              </div>
+              <div class="metric-card">
+                <div class="metric-icon">⚡</div>
+                <div class="metric-content">
+                  <div class="metric-number">85%</div>
+                  <div class="metric-label">Manager Adoption</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-header">
+            <h3>Engage for Corporate Report</h3>
+            <span class="project-tag">Amazon • 2023</span>
+          </div>
+          <div class="project-content">
+            <div class="project-description">
+              <p>Launched comprehensive employee engagement tracking system for 18,000 managers, resulting in significant engagement improvements and exceeding organizational targets within 6 months.</p>
               <div class="tech-stack">
                 <span class="tech-tag">Tableau</span>
-                <span class="tech-tag">Power BI</span>
-                <span class="tech-tag">Bash</span>
-                <span class="tech-tag">Enterprise Security</span>
+                <span class="tech-tag">AWS Redshift</span>
+                <span class="tech-tag">SQL</span>
+                <span class="tech-tag">Analytics</span>
               </div>
             </div>
             <div class="project-metrics">
               <div class="metric-card">
                 <div class="metric-icon">👥</div>
                 <div class="metric-content">
-                  <div class="metric-number">15,000+</div>
-                  <div class="metric-label">Users Supported</div>
+                  <div class="metric-number">18,000</div>
+                  <div class="metric-label">Managers Tracked</div>
                 </div>
               </div>
               <div class="metric-card">
                 <div class="metric-icon">📈</div>
                 <div class="metric-content">
+                  <div class="metric-number">50%</div>
+                  <div class="metric-label">Engagement Boost</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-header">
+            <h3>Tableau-to-Power BI Migration</h3>
+            <span class="project-tag">Navistar • 2020–2021</span>
+          </div>
+          <div class="project-content">
+            <div class="project-description">
+              <p>Led 8-member global team in comprehensive Tableau-to-Power BI migration, converting 150+ dashboards in under 6 months while ensuring seamless organizational transition and maintaining data integrity.</p>
+              <div class="tech-stack">
+                <span class="tech-tag">Tableau</span>
+                <span class="tech-tag">Power BI</span>
+                <span class="tech-tag">Team Leadership</span>
+                <span class="tech-tag">Migration Strategy</span>
+              </div>
+            </div>
+            <div class="project-metrics">
+              <div class="metric-card">
+                <div class="metric-icon">📊</div>
+                <div class="metric-content">
                   <div class="metric-number">150+</div>
                   <div class="metric-label">Dashboards Migrated</div>
+                </div>
+              </div>
+              <div class="metric-card">
+                <div class="metric-icon">👥</div>
+                <div class="metric-content">
+                  <div class="metric-number">8</div>
+                  <div class="metric-label">Global Team Members</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-header">
+            <h3>Fraud Detection System</h3>
+            <span class="project-tag">Navistar • 2019–2020</span>
+          </div>
+          <div class="project-content">
+            <div class="project-description">
+              <p>Exposed dealer mileage tampering through comprehensive warranty truck data analysis, creating sophisticated fraud-detection dashboards that prevented warranty abuse and delivered substantial annual savings.</p>
+              <div class="tech-stack">
+                <span class="tech-tag">SQL</span>
+                <span class="tech-tag">Tableau</span>
+                <span class="tech-tag">Data Analysis</span>
+                <span class="tech-tag">Fraud Detection</span>
+              </div>
+            </div>
+            <div class="project-metrics">
+              <div class="metric-card">
+                <div class="metric-icon">💰</div>
+                <div class="metric-content">
+                  <div class="metric-number">$5M</div>
+                  <div class="metric-label">Annual Savings</div>
+                </div>
+              </div>
+              <div class="metric-card">
+                <div class="metric-icon">🛡️</div>
+                <div class="metric-content">
+                  <div class="metric-number">100%</div>
+                  <div class="metric-label">Fraud Prevention</div>
                 </div>
               </div>
             </div>
