@@ -11,7 +11,7 @@ body {
 .container {
   display: flex;
   max-width: 1200px;
-  margin: 0 auto;
+  margin:  0 auto;
   min-height: 100vh;
   background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
@@ -136,6 +136,76 @@ ul {
 li {
   margin-bottom: 1rem;
   color: #cbd5e1;
+}
+
+.company-item {
+  background: #1e293b;
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.company-item img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  border-radius: 8px;
+  background: #f1f5f9;
+  padding: 0.25rem;
+}
+
+.company-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.company-info h4 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #e2e8f0;
+}
+
+.company-info span {
+  font-size: 0.9rem;
+  color: #94a3b8;
+}
+
+.skill-tag {
+  display: inline-block;
+  background: #334155;
+  color: #f1f5f9;
+  padding: 0.35rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.85rem;
+  margin: 0.25rem;
+  transition: background 0.3s ease;
+}
+
+.skill-tag:hover {
+  background: #3b82f6;
+}
+
+.education-item {
+  background: #1e293b;
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  margin-top: 2rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.education-item h4 {
+  margin: 0 0 0.5rem;
+  color: #e2e8f0;
+}
+
+.education-item span {
+  font-size: 0.9rem;
+  color: #94a3b8;
 }
 
 .project {
