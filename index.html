@@ -1,311 +1,784 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teju Pamarty Portfolio</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Teju Pamarty Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-            color: #e2e8f0;
-            line-height: 1.6;
-            min-height: 100vh;
-        }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      color: #e2e8f0;
+      line-height: 1.6;
+      min-height: 100vh;
+    }
 
-        .container {
-            display: flex;
-            max-width: 1200px;
-            margin: 0 auto;
-            min-height: 100vh;
-            background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
-        }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      min-height: 100vh;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+      background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+    }
 
-        .sidebar {
-            width: 280px;
-            background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
-            padding: 2rem 1.5rem;
-            display: flex;
-            flex-direction: column;
-        }
+    .sidebar {
+      width: 280px;
+      background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
+      padding: 2rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+    }
 
-        .profile {
-            text-align: center;
-            margin-bottom: 2rem;
-        }
+    .profile {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
 
-        .profile-img {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #3b82f6 0%, #f97316 100%);
-            margin: 0 auto 1rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 2.5rem;
-            font-weight: bold;
-            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3);
-            transition: transform 0.3s ease;
-            overflow: hidden;
-            position: relative;
-            padding: 3px;
-        }
+    .profile-img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #3b82f6 0%, #f97316 100%);
+      margin: 0 auto 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3);
+      transition: transform 0.3s ease;
+      overflow: hidden;
+      padding: 3px;
+    }
 
-        .profile-img img {
-            width: calc(100% - 6px);
-            height: calc(100% - 6px);
-            object-fit: cover;
-            border-radius: 50%;
-            background: #1e293b;
-        }
+    .profile-img img {
+      width: calc(100% - 6px);
+      height: calc(100% - 6px);
+      object-fit: cover;
+      border-radius: 50%;
+    }
 
-        .profile-img:hover {
-            transform: scale(1.05) rotate(5deg);
-        }
+    .profile-img:hover {
+      transform: scale(1.05) rotate(5deg);
+    }
 
-        .profile h1 {
-            color: white;
-            font-size: 1.8rem;
-            margin-bottom: 0.5rem;
-            font-weight: 600;
-        }
+    .profile h1 {
+      color: white;
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
 
-        .profile p {
-            color: #94a3b8;
-            font-size: 0.95rem;
-        }
+    .profile p {
+      color: #94a3b8;
+      font-size: 0.95rem;
+    }
 
-        .nav {
-            list-style: none;
-            margin-bottom: auto;
-        }
+    .nav {
+      list-style: none;
+      margin-bottom: auto;
+    }
 
-        .nav li {
-            margin-bottom: 0.5rem;
-        }
+    .nav li {
+      margin-bottom: 0.5rem;
+    }
 
-        .nav button {
-            width: 100%;
-            padding: 0.75rem 1rem;
-            background: transparent;
-            border: none;
-            color: #94a3b8;
-            text-align: left;
-            cursor: pointer;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-            font-size: 0.95rem;
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-        }
+    .nav button, .nav a {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      background: transparent;
+      border: none;
+      color: #94a3b8;
+      text-align: left;
+      cursor: pointer;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      font-size: 0.95rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+    }
 
-        .nav button:hover, .nav button.active {
-            background: linear-gradient(135deg, #3b82f6 0%, #f97316 100%);
-            color: white;
-            transform: translateX(4px);
-        }
+    .nav button:hover, .nav button.active, .nav a:hover {
+      background: linear-gradient(135deg, #3b82f6 0%, #f97316 100%);
+      color: white;
+      transform: translateX(4px);
+    }
 
-        .content {
-            flex: 1;
-            padding: 3rem;
-            overflow-y: auto;
-        }
+    .content {
+      flex: 1;
+      padding: 3rem;
+      overflow-y: auto;
+    }
 
-        .section {
-            display: none;
-        }
+    .section {
+      display: none;
+      animation: fadeIn 0.5s ease-in;
+    }
 
-        .section.active {
-            display: block;
-        }
+    .section.active {
+      display: block;
+    }
 
-        .career-row {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1.5rem;
-        }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
 
-        .company-item {
-            display: flex;
-            align-items: center;
-            background: #334155;
-            padding: 1rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-        }
+    .section h2 {
+      font-size: 2.5rem;
+      color: #f8fafc;
+      margin-bottom: 1rem;
+      background: linear-gradient(135deg, #3b82f6 0%, #f97316 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
 
-        .company-logo {
-            width: 50px;
-            height: 50px;
-            object-fit: contain;
-            margin-right: 1rem;
-        }
+    .section > p {
+      font-size: 1.1rem;
+      color: #cbd5e1;
+      margin-bottom: 2rem;
+    }
 
-        .company-info h4 {
-            margin: 0;
-            font-size: 1.1rem;
-        }
+    /* Companies Grid */
+    .companies-header {
+      text-align: left;
+      margin-bottom: 1rem;
+    }
 
-        .company-info span {
-            font-size: 0.9rem;
-            color: #94a3b8;
-        }
+    .companies-header h3 {
+      color: #e2e8f0;
+      font-size: 1.5rem;
+      margin-bottom: 0.25rem;
+      font-weight: 600;
+      background: linear-gradient(135deg, #3b82f6 0%, #f97316 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
 
-        .highlight-box-row {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1.5rem;
-            margin-bottom: 2rem;
-        }
+    .companies-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      margin-bottom: 3rem;
+    }
 
-        .highlight-box {
-            background: #1e293b;
-            padding: 1.5rem;
-            border-radius: 12px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-        }
+    .company-item {
+      background: linear-gradient(135deg, #334155 0%, #475569 100%);
+      border-radius: 12px;
+      padding: 1.5rem;
+      border: 1px solid #475569;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
 
-        .highlight-box h3 {
-            background: linear-gradient(135deg, #3b82f6 0%, #f97316 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
+    .company-item::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+      transition: left 0.5s ease;
+    }
 
-        .skills-section {
-            margin-top: 2rem;
-        }
+    .company-item:hover {
+      transform: translateY(-2px) scale(1.02);
+      box-shadow: 0 8px 20px rgba(59, 130, 246, 0.15);
+    }
 
-        .skills-section h3 {
-            margin-bottom: 0.5rem;
-        }
+    .company-item:hover::before {
+      left: 100%;
+    }
 
-        .skill-tag {
-            background: linear-gradient(135deg, #3b82f6, #f97316);
-            color: #fff;
-            padding: 0.3rem 0.7rem;
-            border-radius: 20px;
-            font-size: 0.875rem;
-            display: inline-block;
-            margin: 0.3rem 0.3rem 0.6rem 0;
-            font-weight: 500;
-        }
+    .company-logo {
+      width: 60px;
+      height: 60px;
+      object-fit: contain;
+      border-radius: 8px;
+      background: white;
+      padding: 8px;
+    }
 
-        .skills-section {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 1rem;
-        }
-    </style>
+    .company-info {
+      flex: 1;
+    }
+
+    .company-info h4 {
+      color: #f8fafc;
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+
+    .company-info span {
+      color: #94a3b8;
+      font-size: 0.9rem;
+    }
+
+    /* Skills Grid */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+    }
+
+    .skill-card {
+      background: linear-gradient(135deg, #475569 0%, #64748b 100%);
+      padding: 1.5rem;
+      border-radius: 12px;
+      border: 1px solid #475569;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .skill-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+      transition: left 0.5s ease;
+    }
+
+    .skill-card:hover {
+      transform: translateY(-4px) scale(1.02);
+      box-shadow: 0 20px 40px rgba(59, 130, 246, 0.2);
+    }
+
+    .skill-card:hover::before {
+      left: 100%;
+    }
+
+    .skill-card h3 {
+      color: #f8fafc;
+      margin-bottom: 0.5rem;
+      font-size: 1.1rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .skill-card p {
+      color: #cbd5e1;
+      font-size: 0.9rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Technical Skills */
+    .technical-skills {
+      margin-bottom: 3rem;
+      padding: 2rem;
+      background: linear-gradient(135deg, #334155 0%, #475569 100%);
+      border-radius: 12px;
+      border: 1px solid #475569;
+    }
+
+    .technical-skills h3 {
+      color: #f8fafc;
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+      background: linear-gradient(135deg, #3b82f6 0%, #f97316 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .tech-skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .skill-category h4 {
+      color: #e2e8f0;
+      font-size: 1rem;
+      margin-bottom: 0.75rem;
+      font-weight: 600;
+    }
+
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .skill-tag {
+      background: linear-gradient(135deg, #3b82f6 0%, #f97316 100%);
+      color: white;
+      padding: 0.4rem 0.8rem;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      cursor: default;
+    }
+
+    .skill-tag:hover {
+      transform: translateY(-2px) scale(1.05);
+      box-shadow: 0 5px 15px rgba(59, 130, 246, 0.3);
+    }
+
+    /* Education */
+    .education-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+    }
+
+    .education-item {
+      background: linear-gradient(135deg, #475569 0%, #64748b 100%);
+      padding: 1.5rem;
+      border-radius: 12px;
+      border: 1px solid #475569;
+      transition: all 0.3s ease;
+    }
+
+    .education-item:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px rgba(59, 130, 246, 0.2);
+    }
+
+    .education-item h4 {
+      color: #f8fafc;
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .education-item span {
+      color: #94a3b8;
+      font-size: 0.9rem;
+    }
+
+    /* Project Cards */
+    .project-card {
+      background: linear-gradient(135deg, #334155 0%, #475569 100%);
+      border-radius: 16px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      border: 1px solid #475569;
+      transition: all 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px rgba(59, 130, 246, 0.2);
+    }
+
+    .project-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .project-header h3 {
+      color: #f8fafc;
+      font-size: 1.5rem;
+      margin: 0;
+      flex: 1;
+      min-width: 250px;
+    }
+
+    .project-tag {
+      background: linear-gradient(135deg, #3b82f6 0%, #f97316 100%);
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+
+    .project-content {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 2rem;
+      align-items: start;
+    }
+
+    .project-description p {
+      color: #cbd5e1;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+
+    .tech-stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .tech-tag {
+      background: linear-gradient(135deg, #64748b 0%, #475569 100%);
+      color: #e2e8f0;
+      padding: 0.3rem 0.7rem;
+      border-radius: 15px;
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+
+    .project-metrics {
+      min-width: 280px;
+    }
+
+    .metric-card {
+      background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+      border-radius: 12px;
+      padding: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+      border: 1px solid #334155;
+    }
+
+    .metric-icon {
+      font-size: 2rem;
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, #3b82f6 0%, #f97316 100%);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .metric-content {
+      flex: 1;
+    }
+
+    .metric-number {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #f8fafc;
+      line-height: 1;
+    }
+
+    .metric-label {
+      color: #94a3b8;
+      font-size: 0.9rem;
+      margin-top: 0.25rem;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+      
+      .sidebar {
+        width: 100%;
+        padding: 1.5rem;
+      }
+      
+      .nav {
+        display: flex;
+        gap: 0.5rem;
+        overflow-x: auto;
+      }
+      
+      .nav li {
+        margin-bottom: 0;
+        min-width: fit-content;
+      }
+      
+      .content {
+        padding: 2rem 1.5rem;
+      }
+
+      .companies-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .project-content {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+
+      .project-metrics {
+        min-width: auto;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <div class="sidebar">
-            <div class="profile">
-                <div class="profile-img">
-                    <img src="profile.jpg" alt="Profile Image" />
-                </div>
-                <h1>Teju Pamarty</h1>
-                <p>Data & Analytics Professional</p>
+  <div class="container">
+    <aside class="sidebar">
+      <div class="profile">
+        <div class="profile-img">
+          <img src="profile.jpg" alt="Profile Image" />
+        </div>
+        <h1>Teju Pamarty</h1>
+        <p>Data & Analytics Professional</p>
+      </div>
+      <ul class="nav">
+        <li><button class="active" onclick="showSection('home')"><i class="fa-solid fa-house"></i> Home</button></li>
+        <li><button onclick="showSection('projects')"><i class="fa-solid fa-briefcase"></i> Projects</button></li>
+        <li><a href="https://public.tableau.com/app/profile/teju.deep.pamarty/vizzes" target="_blank"><i class="fa-solid fa-chart-bar"></i> Tableau Public</a></li>
+        <li><a href="https://linkedin.com/in/tejudeeppamarty" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a></li>
+        <li><a href="mailto:teju.deep@gmail.com"><i class="fa-solid fa-envelope"></i> Get in Touch</a></li>
+      </ul>
+    </aside>
+
+    <main class="content">
+      <section id="home" class="section active">
+        <h2>Product, Analytics & Data Engineer</h2>
+        <p>A creative problem-solver with an insatiable curiosity and a unique approach to technical challenges. I've worked with companies from startups to Fortune 100 firms like Amazon, PODS, Navistar, and Wells Fargo.</p>
+
+        <div class="companies-header">
+          <h3>Career Journey</h3>
+        </div>
+        <div class="companies-grid">
+          <div class="company-item">
+            <img src="amazon.png" alt="Amazon Logo" class="company-logo">
+            <div class="company-info">
+              <h4>Amazon</h4>
+              <span>Business Intelligence Engineer • 2022 – Present</span>
             </div>
-            <ul class="nav">
-                <li><button class="active" onclick="showSection('home')">Home</button></li>
-                <li><button onclick="showSection('projects')">Projects</button></li>
-                <li><a href="https://public.tableau.com" target="_blank">Tableau Public</a></li>
-                <li><a href="https://linkedin.com/in/tejudeeppamarty" target="_blank">LinkedIn</a></li>
-                <li><a href="mailto:teju.deep@gmail.com">Get in Touch</a></li>
-            </ul>
+          </div>
+          <div class="company-item">
+            <img src="pods.png" alt="PODS Logo" class="company-logo">
+            <div class="company-info">
+              <h4>PODS</h4>
+              <span>BI Lead • 2021 – 2022</span>
+            </div>
+          </div>
+          <div class="company-item">
+            <img src="navistar.png" alt="Navistar Logo" class="company-logo">
+            <div class="company-info">
+              <h4>Navistar</h4>
+              <span>BI Engineer • 2018 – 2021</span>
+            </div>
+          </div>
+          <div class="company-item">
+            <img src="wells.png" alt="Wells Fargo Logo" class="company-logo">
+            <div class="company-info">
+              <h4>Wells Fargo</h4>
+              <span>Data Analyst • 2017 – 2018</span>
+            </div>
+          </div>
         </div>
 
-        <div class="content">
-            <section id="home" class="section active">
-                <h2>About Me</h2>
-                <p>A creative problem-solver with an insatiable curiosity and a unique approach to technical challenges. I've worked with companies like Amazon, PODS, Navistar, and Wells Fargo.</p>
-
-                <h2>Career Journey</h2>
-                <div class="career-row">
-                    <div class="company-item">
-                        <img src="amazon.png" alt="Amazon Logo" class="company-logo">
-                        <div class="company-info">
-                            <h4>Amazon</h4>
-                            <span>Business Intelligence Engineer • 2022 – Present</span>
-                        </div>
-                    </div>
-                    <div class="company-item">
-                        <img src="pods.png" alt="PODS Logo" class="company-logo">
-                        <div class="company-info">
-                            <h4>PODS</h4>
-                            <span>BI Lead • 2021 – 2022</span>
-                        </div>
-                    </div>
-                    <div class="company-item">
-                        <img src="navistar.png" alt="Navistar Logo" class="company-logo">
-                        <div class="company-info">
-                            <h4>Navistar</h4>
-                            <span>BI Engineer • 2018 – 2021</span>
-                        </div>
-                    </div>
-                    <div class="company-item">
-                        <img src="wells.png" alt="Wells Fargo Logo" class="company-logo">
-                        <div class="company-info">
-                            <h4>Wells Fargo</h4>
-                            <span>Data Analyst • 2017 – 2018</span>
-                        </div>
-                    </div>
-                </div>
-
-                <h2>Highlights</h2>
-                <div class="highlight-box-row">
-                    <div class="highlight-box">
-                        <h3>Data Engineering & Analytics</h3>
-                        <p>Expert in SQL, Python, AWS (Redshift, Athena, S3, Glue), and more.</p>
-                    </div>
-                    <div class="highlight-box">
-                        <h3>Dashboards & Visualizations</h3>
-                        <p>Skilled in Tableau, Power BI, and QuickSight. Built dashboards for 15,000+ users.</p>
-                    </div>
-                </div>
-
-                <h2>Technical Skills</h2>
-                <div class="skills-section">
-                    <div class="skill-tag">SQL</div>
-                    <div class="skill-tag">Python</div>
-                    <div class="skill-tag">AWS</div>
-                    <div class="skill-tag">Redshift</div>
-                    <div class="skill-tag">Tableau</div>
-                    <div class="skill-tag">Power BI</div>
-                </div>
-            </section>
-
-            <section id="projects" class="section">
-                <h2>Projects</h2>
-                <div class="project-card">
-                    <h3>Enterprise Reporting Platform</h3>
-                    <p>Built scalable reporting for 2,200+ sites, reducing processing time by 90%.</p>
-                </div>
-                <div class="project-card">
-                    <h3>Gen AI Dashboards</h3>
-                    <p>Automated reporting with AI, delivering $75K in annual savings.</p>
-                </div>
-            </section>
+        <div class="skills-grid">
+          <div class="skill-card">
+            <h3>Data Engineering & Analytics</h3>
+            <p>Expert in SQL, Python, AWS (Redshift, Athena, S3, Glue, Step Functions). Built and optimized data pipelines serving 1.5M+ employees worldwide. Delivered enterprise-wide reporting platforms for 6 Amazon products, scaling from 15 to 2200+ sites and optimized data models by 90%.</p>
+          </div>
+          <div class="skill-card">
+            <h3>Dashboards & Visualizations</h3>
+            <p>Expert in Tableau, Power BI, QuickSight. Architected, built, managed, and maintained secure robust Tableau environments for over 15,000+ users. Implemented row-level security enterprise-wide and built custom Bash scripts to automate Tableau server tasks.</p>
+          </div>
+          <div class="skill-card">
+            <h3>Gen AI & Advanced Analytics</h3>
+            <p>Used Claude and Amazon Q to generate agents that provide instant callouts and automate insights. Helped develop and enhance internal AI tools at Amazon for documentation, data dictionaries, summaries, and more.</p>
+          </div>
+          <div class="skill-card">
+            <h3>Technical Leadership</h3>
+            <p>Led cross-functional teams of 8+ engineers through system rebuilds. Presented weekly business reviews to Amazon directors, rolled up to CEO. Owned performance tuning, dashboard strategy, and knowledge sharing.</p>
+          </div>
         </div>
-    </div>
 
-    <script>
-        function showSection(id) {
-            document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
-            document.getElementById(id).classList.add('active');
-        }
-    </script>
+        <div class="technical-skills">
+          <h3>Technical Skills</h3>
+          <div class="tech-skills-grid">
+            <div class="skill-category">
+              <h4>Programming & Querying</h4>
+              <div class="skill-tags">
+                <span class="skill-tag">SQL</span>
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">Hive</span>
+                <span class="skill-tag">PySpark</span>
+                <span class="skill-tag">Scala</span>
+              </div>
+            </div>
+            <div class="skill-category">
+              <h4>Cloud & Data Platforms</h4>
+              <div class="skill-tags">
+                <span class="skill-tag">AWS</span>
+                <span class="skill-tag">Redshift</span>
+                <span class="skill-tag">Spark</span>
+                <span class="skill-tag">Snowflake</span>
+                <span class="skill-tag">Hadoop</span>
+              </div>
+            </div>
+            <div class="skill-category">
+              <h4>Dashboards & BI Tools</h4>
+              <div class="skill-tags">
+                <span class="skill-tag">Tableau</span>
+                <span class="skill-tag">Power BI</span>
+                <span class="skill-tag">QuickSight</span>
+                <span class="skill-tag">Excel</span>
+                <span class="skill-tag">SSRS</span>
+              </div>
+            </div>
+            <div class="skill-category">
+              <h4>Data Engineering & Automation</h4>
+              <div class="skill-tags">
+                <span class="skill-tag">DBT</span>
+                <span class="skill-tag">Airflow</span>
+                <span class="skill-tag">SSAS</span>
+                <span class="skill-tag">Git</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="companies-header">
+          <h3>Education</h3>
+        </div>
+        <div class="education-grid">
+          <div class="education-item">
+            <h4>University of North Texas</h4>
+            <span>Master's, Electrical Engineering • 2015 – 2017</span>
+          </div>
+          <div class="education-item">
+            <h4>Jawaharlal Nehru Technological University</h4>
+            <span>Bachelor's, Electrical Engineering • 2011 – 2015</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="section">
+        <h2>Key Projects</h2>
+        <p>Showcasing impactful data engineering and analytics projects that delivered measurable business value.</p>
+
+        <div class="project-card">
+          <div class="project-header">
+            <h3>Enterprise Reporting Platform</h3>
+            <span class="project-tag">Amazon • 2023–2024</span>
+          </div>
+          <div class="project-content">
+            <div class="project-description">
+              <p>Built scalable reporting across 2,200+ sites and 6 Amazon products. Optimized data models and reduced processing time by 90% through strategic architecture improvements.</p>
+              <div class="tech-stack">
+                <span class="tech-tag">AWS Redshift</span>
+                <span class="tech-tag">Athena</span>
+                <span class="tech-tag">Tableau</span>
+                <span class="tech-tag">QuickSight</span>
+                <span class="tech-tag">SQL</span>
+              </div>
+            </div>
+            <div class="project-metrics">
+              <div class="metric-card">
+                <div class="metric-icon">📊</div>
+                <div class="metric-content">
+                  <div class="metric-number">2,200+</div>
+                  <div class="metric-label">Sites Supported</div>
+                </div>
+              </div>
+              <div class="metric-card">
+                <div class="metric-icon">⚡</div>
+                <div class="metric-content">
+                  <div class="metric-number">90%</div>
+                  <div class="metric-label">Faster Performance</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-header">
+            <h3>Gen AI Automation Platform</h3>
+            <span class="project-tag">Amazon • 2024</span>
+          </div>
+          <div class="project-content">
+            <div class="project-description">
+              <p>Implemented AI agents using Claude and Amazon Q to automate insights generation and reduce manual data requests by 90%. Delivered significant productivity improvements across the organization.</p>
+              <div class="tech-stack">
+                <span class="tech-tag">Amazon Q</span>
+                <span class="tech-tag">Claude</span>
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">AWS</span>
+                <span class="tech-tag">Gen AI</span>
+              </div>
+            </div>
+            <div class="project-metrics">
+              <div class="metric-card">
+                <div class="metric-icon">🤖</div>
+                <div class="metric-content">
+                  <div class="metric-number">90%</div>
+                  <div class="metric-label">Manual Tasks Reduced</div>
+                </div>
+              </div>
+              <div class="metric-card">
+                <div class="metric-icon">💰</div>
+                <div class="metric-content">
+                  <div class="metric-number">$56K</div>
+                  <div class="metric-label">Annual Savings</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-header">
+            <h3>Tableau Server Migration</h3>
+            <span class="project-tag">PODS • 2021–2022</span>
+          </div>
+          <div class="project-content">
+            <div class="project-description">
+              <p>Led migration of 150+ dashboards to Power BI while managing global team of 8 engineers. Implemented enterprise-wide security and automated server optimization processes.</p>
+              <div class="tech-stack">
+                <span class="tech-tag">Tableau</span>
+                <span class="tech-tag">Power BI</span>
+                <span class="tech-tag">Bash</span>
+                <span class="tech-tag">Enterprise Security</span>
+              </div>
+            </div>
+            <div class="project-metrics">
+              <div class="metric-card">
+                <div class="metric-icon">👥</div>
+                <div class="metric-content">
+                  <div class="metric-number">15,000+</div>
+                  <div class="metric-label">Users Supported</div>
+                </div>
+              </div>
+              <div class="metric-card">
+                <div class="metric-icon">📈</div>
+                <div class="metric-content">
+                  <div class="metric-number">150+</div>
+                  <div class="metric-label">Dashboards Migrated</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+      document.querySelectorAll('.nav button').forEach(b => b.classList.remove('active'));
+      event.target.classList.add('active');
+    }
+  </script>
 </body>
 </html>
