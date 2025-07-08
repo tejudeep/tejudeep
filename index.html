@@ -148,22 +148,20 @@
     }
 
     .sidebar-skill-tag {
-      background: linear-gradient(135deg, #475569 0%, #64748b 100%);
-      color: #e2e8f0;
+      background: linear-gradient(135deg, #3b82f6 0%, #f97316 100%);
+      color: white;
       padding: 0.3rem 0.6rem;
       border-radius: 15px;
       font-size: 0.75rem;
       font-weight: 500;
       transition: all 0.3s ease;
       cursor: default;
-      border: 1px solid #64748b;
+      box-shadow: 0 2px 4px rgba(59, 130, 246, 0.2);
     }
 
     .sidebar-skill-tag:hover {
-      background: linear-gradient(135deg, #3b82f6 0%, #f97316 100%);
-      color: white;
-      transform: translateY(-1px);
-      box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3);
+      transform: translateY(-1px) scale(1.05);
+      box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
     }
 
     .content {
@@ -319,12 +317,6 @@
       background-clip: text;
     }
 
-    .projects-header p {
-      color: #94a3b8;
-      font-size: 0.9rem;
-      margin: 0;
-    }
-
     .project-card {
       background: linear-gradient(135deg, #334155 0%, #475569 100%);
       border-radius: 16px;
@@ -435,6 +427,34 @@
       color: #94a3b8;
       font-size: 0.9rem;
       margin-top: 0.25rem;
+    }
+
+    .metric-visual {
+      margin-top: 1rem;
+    }
+
+    .scale-visualization {
+      background: #1e293b;
+      border-radius: 8px;
+      padding: 1rem;
+      border: 1px solid #334155;
+    }
+
+    .scale-bar {
+      height: 40px;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .scale-label {
+      color: white;
+      font-weight: 600;
+      position: relative;
+      z-index: 1;
     }
 
     /* Skills Grid - moved to bottom */
@@ -584,7 +604,7 @@
         <li><button class="active" onclick="showSection('home')"><i class="fa-solid fa-house"></i> Home</button></li>
         <li><a href="https://public.tableau.com/app/profile/teju.deep.pamarty/vizzes" target="_blank"><i class="fa-solid fa-chart-bar"></i> Tableau Public</a></li>
         <li><a href="https://linkedin.com/in/tejudeeppamarty" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a></li>
-        <li><a href="mailto:teju.deep@gmail.com"><i class="fa-solid fa-envelope"></i> Get in Touch</a></li>
+        <li><a href="mailto:teju.deep00@gmail.com"><i class="fa-solid fa-envelope"></i> Get in Touch</a></li>
       </ul>
 
       <div class="sidebar-skills">
@@ -642,7 +662,7 @@
     <main class="content">
       <section id="home" class="section active">
         <h2>Data & Analytics Professional</h2>
-        <p>A creative problem-solver with an insatiable curiosity and a unique approach to technical challenges. My professional philosophy is to find innovative, unconventional solutions that not only solve problems but transform them into opportunities for efficiency and growth. I've worked with companies from startups to Fortune 100 firms like Amazon, PODS, Navistar, and Wells Fargo to build and transform the analytical solutions for a better future and impact. I enjoy working cross-functionally with software, product, program, and science teams to drive impact at scale.</p>
+        <p>A creative problem-solver with an innovative approach to technical challenges. I transform complex data problems into opportunities for efficiency and growth, working with Fortune 100 companies like Amazon, PODS, Navistar, and Wells Fargo. I excel at cross-functional collaboration with software, product, and science teams to drive impact at scale.</p>
 
         <div class="companies-header">
           <h3>Career Journey</h3>
@@ -680,7 +700,75 @@
 
         <div class="projects-header">
           <h3>Key Projects</h3>
-          <p>Showcasing impactful data engineering and analytics projects that delivered measurable business value</p>
+        </div>
+
+        <div class="project-card">
+          <div class="project-header">
+            <h3>Global Employee Engagement Platform</h3>
+            <span class="project-tag">Amazon • 2022–2024</span>
+          </div>
+          <div class="project-content">
+            <div class="project-description">
+              <p>Independently owned, expanded, and launched comprehensive enterprise-wide reporting infrastructure for Amazon's internal employee engagement platform from product inception to worldwide deployment.</p>
+              <div class="tech-stack">
+                <span class="tech-tag">AWS Redshift</span>
+                <span class="tech-tag">Athena</span>
+                <span class="tech-tag">Tableau</span>
+                <span class="tech-tag">QuickSight</span>
+                <span class="tech-tag">SQL</span>
+              </div>
+            </div>
+            <div class="project-metrics">
+              <div class="metric-card">
+                <div class="metric-icon">👥</div>
+                <div class="metric-content">
+                  <div class="metric-number">1.5M+</div>
+                  <div class="metric-label">Employees Served</div>
+                </div>
+              </div>
+              <div class="metric-visual">
+                <div class="scale-visualization">
+                  <div class="scale-bar" style="width: 100%; background: linear-gradient(135deg, #3b82f6 0%, #f97316 100%);">
+                    <span class="scale-label">Global Scale Deployment</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-header">
+            <h3>Fraud Detection System</h3>
+            <span class="project-tag">Navistar • 2019–2020</span>
+          </div>
+          <div class="project-content">
+            <div class="project-description">
+              <p>Exposed dealer mileage tampering through comprehensive warranty truck data analysis, creating sophisticated fraud-detection dashboards that prevented warranty abuse and delivered substantial annual savings.</p>
+              <div class="tech-stack">
+                <span class="tech-tag">SQL</span>
+                <span class="tech-tag">Tableau</span>
+                <span class="tech-tag">Data Analysis</span>
+                <span class="tech-tag">Fraud Detection</span>
+              </div>
+            </div>
+            <div class="project-metrics">
+              <div class="metric-card">
+                <div class="metric-icon">💰</div>
+                <div class="metric-content">
+                  <div class="metric-number">$5M</div>
+                  <div class="metric-label">Annual Savings</div>
+                </div>
+              </div>
+              <div class="metric-card">
+                <div class="metric-icon">🛡️</div>
+                <div class="metric-content">
+                  <div class="metric-number">100%</div>
+                  <div class="metric-label">Fraud Prevention</div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div class="project-card">
@@ -712,41 +800,6 @@
                 <div class="metric-content">
                   <div class="metric-number">100%</div>
                   <div class="metric-label">Automation Rate</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-header">
-            <h3>Unified Analytics Dashboard</h3>
-            <span class="project-tag">Amazon • 2024</span>
-          </div>
-          <div class="project-content">
-            <div class="project-description">
-              <p>Developed unified analytics dashboard integrating 50+ metrics, leveraging Gen AI to reduce manual data requests and generate significant annual cost savings with self-service capabilities.</p>
-              <div class="tech-stack">
-                <span class="tech-tag">Amazon Q</span>
-                <span class="tech-tag">Gen AI</span>
-                <span class="tech-tag">Python</span>
-                <span class="tech-tag">AWS</span>
-                <span class="tech-tag">QuickSight</span>
-              </div>
-            </div>
-            <div class="project-metrics">
-              <div class="metric-card">
-                <div class="metric-icon">📈</div>
-                <div class="metric-content">
-                  <div class="metric-number">50+</div>
-                  <div class="metric-label">Metrics Integrated</div>
-                </div>
-              </div>
-              <div class="metric-card">
-                <div class="metric-icon">💰</div>
-                <div class="metric-content">
-                  <div class="metric-number">$56K</div>
-                  <div class="metric-label">Annual Savings</div>
                 </div>
               </div>
             </div>
@@ -790,6 +843,76 @@
 
         <div class="project-card">
           <div class="project-header">
+            <h3>Secure Enterprise Tableau Environment</h3>
+            <span class="project-tag">PODS • 2021–2022</span>
+          </div>
+          <div class="project-content">
+            <div class="project-description">
+              <p>Deployed comprehensive secure Tableau environment for enterprise-scale operations, implementing multi-layered security architecture, environment segregation, role-based access controls, and advanced authentication protocols to ensure complete data privacy and compliance.</p>
+              <div class="tech-stack">
+                <span class="tech-tag">Tableau Server</span>
+                <span class="tech-tag">Security Architecture</span>
+                <span class="tech-tag">RBAC</span>
+                <span class="tech-tag">Authentication</span>
+                <span class="tech-tag">Enterprise Deployment</span>
+              </div>
+            </div>
+            <div class="project-metrics">
+              <div class="metric-card">
+                <div class="metric-icon">👥</div>
+                <div class="metric-content">
+                  <div class="metric-number">15,000</div>
+                  <div class="metric-label">Users Supported</div>
+                </div>
+              </div>
+              <div class="metric-card">
+                <div class="metric-icon">🔒</div>
+                <div class="metric-content">
+                  <div class="metric-number">100%</div>
+                  <div class="metric-label">Security Compliance</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-header">
+            <h3>Unified Analytics Dashboard</h3>
+            <span class="project-tag">Amazon • 2024</span>
+          </div>
+          <div class="project-content">
+            <div class="project-description">
+              <p>Developed unified analytics dashboard integrating 50+ metrics, leveraging Gen AI to reduce manual data requests and generate significant annual cost savings with self-service capabilities.</p>
+              <div class="tech-stack">
+                <span class="tech-tag">Amazon Q</span>
+                <span class="tech-tag">Gen AI</span>
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">AWS</span>
+                <span class="tech-tag">QuickSight</span>
+              </div>
+            </div>
+            <div class="project-metrics">
+              <div class="metric-card">
+                <div class="metric-icon">📈</div>
+                <div class="metric-content">
+                  <div class="metric-number">50+</div>
+                  <div class="metric-label">Metrics Integrated</div>
+                </div>
+              </div>
+              <div class="metric-card">
+                <div class="metric-icon">💰</div>
+                <div class="metric-content">
+                  <div class="metric-number">$56K</div>
+                  <div class="metric-label">Annual Savings</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-header">
             <h3>Engage for Corporate Report</h3>
             <span class="project-tag">Amazon • 2023</span>
           </div>
@@ -816,40 +939,6 @@
                 <div class="metric-content">
                   <div class="metric-number">50%</div>
                   <div class="metric-label">Engagement Boost</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-header">
-            <h3>Fraud Detection System</h3>
-            <span class="project-tag">Navistar • 2019–2020</span>
-          </div>
-          <div class="project-content">
-            <div class="project-description">
-              <p>Exposed dealer mileage tampering through comprehensive warranty truck data analysis, creating sophisticated fraud-detection dashboards that prevented warranty abuse and delivered substantial annual savings.</p>
-              <div class="tech-stack">
-                <span class="tech-tag">SQL</span>
-                <span class="tech-tag">Tableau</span>
-                <span class="tech-tag">Data Analysis</span>
-                <span class="tech-tag">Fraud Detection</span>
-              </div>
-            </div>
-            <div class="project-metrics">
-              <div class="metric-card">
-                <div class="metric-icon">💰</div>
-                <div class="metric-content">
-                  <div class="metric-number">$5M</div>
-                  <div class="metric-label">Annual Savings</div>
-                </div>
-              </div>
-              <div class="metric-card">
-                <div class="metric-icon">🛡️</div>
-                <div class="metric-content">
-                  <div class="metric-number">100%</div>
-                  <div class="metric-label">Fraud Prevention</div>
                 </div>
               </div>
             </div>
