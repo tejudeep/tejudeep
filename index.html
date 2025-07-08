@@ -37,6 +37,13 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
+      .company-logo {
+      width: 50px;
+      height: 50px;
+      object-fit: contain;
+      border-radius: 8px;
+      margin-bottom: 0.5rem;
+    }
   </style>
 </head>
 <body>
@@ -66,28 +73,28 @@
         <h2>Career Journey</h2>
         <div class="career-row">
           <div class="company-item">
-            <img src="amazon-logo.png" alt="Amazon Logo">
+            <img src="amazon.png" alt="Amazon Logo" class="company-logo">
             <div class="company-info">
               <h4>Amazon</h4>
               <span>Business Intelligence Engineer • 2022 – Present</span>
             </div>
           </div>
           <div class="company-item">
-            <img src="pods-logo.png" alt="PODS Logo">
+            <img src="pods.png" alt="PODS Logo" class="company-logo">
             <div class="company-info">
               <h4>PODS</h4>
               <span>BI Lead • 2021 – 2022</span>
             </div>
           </div>
           <div class="company-item">
-            <img src="navistar-logo.png" alt="Navistar Logo">
+            <img src="navistar.png" alt="Navistar Logo" class="company-logo">
             <div class="company-info">
               <h4>Navistar</h4>
               <span>BI Engineer • 2018 – 2021</span>
             </div>
           </div>
           <div class="company-item">
-            <img src="wellsfargo-logo.png" alt="Wells Fargo Logo">
+            <img src="wells.png" alt="Wells Fargo Logo" class="company-logo">
             <div class="company-info">
               <h4>Wells Fargo</h4>
               <span>Data Analyst • 2017 – 2018</span>
@@ -157,7 +164,60 @@
 
       <section id="projects" class="section">
         <h2>Key Projects</h2>
-        <!-- I’ll populate more structured project containers next if needed -->
+
+        <div class="project">
+          <h3>📊 Enterprise Reporting Platform <span>Amazon • 2023–2024</span></h3>
+          <ul>
+            <li>Built scalable reporting across <span class="stat">2,200+</span> sites and 6 Amazon products</li>
+            <li><strong>🛠 Tools:</strong> Redshift, Athena, Tableau, QuickSight</li>
+            <li><strong>📈 Impact:</strong> Reduced processing time by <span class="stat">90%</span></li>
+          </ul>
+        </div>
+
+        <div class="project">
+          <h3>🧠 Gen AI Dashboards <span>Amazon • 2024</span></h3>
+          <ul>
+            <li>Reduced manual effort by <span class="stat">90%</span> with AI-generated insights and workflows</li>
+            <li><strong>🛠 Tools:</strong> Amazon Q, Claude, Python, AWS</li>
+            <li><strong>💰 Savings:</strong> <span class="stat">$56,000/year</span></li>
+          </ul>
+        </div>
+
+        <div class="project">
+          <h3>🚚 Warranty Fraud Detection <span>Navistar • 2020</span></h3>
+          <ul>
+            <li>Uncovered <span class="stat">$5M+</span> in warranty fraud via analytics on mileage and service data</li>
+            <li><strong>🛠 Tools:</strong> SQL, Hive, Tableau</li>
+            <li><strong>📊 Result:</strong> Created fraud alert models to protect revenue</li>
+          </ul>
+        </div>
+
+        <div class="project">
+          <h3>📈 Tableau to Power BI Migration <span>PODS • 2022</span></h3>
+          <ul>
+            <li>Led global team of 8 to migrate <span class="stat">150+</span> Tableau dashboards to Power BI</li>
+            <li><strong>🛠 Tools:</strong> Tableau, Power BI, Bash</li>
+            <li><strong>📉 Time Savings:</strong> Completed in under 6 months</li>
+          </ul>
+        </div>
+
+        <div class="project">
+          <h3>🧪 Self-Service Dashboards <span>PODS • 2022</span></h3>
+          <ul>
+            <li>Built from scratch a tool saving <span class="stat">16 hours/week</span> for analysts</li>
+            <li><strong>🛠 Tools:</strong> SQL, Tableau, Python</li>
+            <li><strong>💡 Value:</strong> <span class="stat">$56K/year</span> productivity savings</li>
+          </ul>
+        </div>
+
+        <div class="project">
+          <h3>📅 Ticket Metrics Automation <span>Amazon • 2024</span></h3>
+          <ul>
+            <li>Automated data quality and scrum updates using Amazon Q agents</li>
+            <li><strong>🛠 Tools:</strong> Amazon Q, Python, Redshift</li>
+            <li><strong>🚀 Result:</strong> 90% fewer manual ticket metrics requests</li>
+          </ul>
+        </div>
       </section>
     </main>
   </div>
