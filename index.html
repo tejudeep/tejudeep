@@ -30,11 +30,12 @@
     }
 
     .sidebar {
-      width: 280px;
+      width: 320px;
       background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
       padding: 2rem 1.5rem;
       display: flex;
       flex-direction: column;
+      overflow-y: auto;
     }
 
     .profile {
@@ -82,7 +83,7 @@
 
     .nav {
       list-style: none;
-      margin-bottom: auto;
+      margin-bottom: 2rem;
     }
 
     .nav li {
@@ -110,6 +111,59 @@
       background: linear-gradient(135deg, #3b82f6 0%, #f97316 100%);
       color: white;
       transform: translateX(4px);
+    }
+
+    /* Sidebar Technical Skills */
+    .sidebar-skills {
+      border-top: 1px solid #475569;
+      padding-top: 1.5rem;
+    }
+
+    .sidebar-skills h3 {
+      color: #f8fafc;
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+      font-weight: 600;
+      background: linear-gradient(135deg, #3b82f6 0%, #f97316 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .sidebar-skill-category {
+      margin-bottom: 1.5rem;
+    }
+
+    .sidebar-skill-category h4 {
+      color: #cbd5e1;
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+
+    .sidebar-skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    .sidebar-skill-tag {
+      background: linear-gradient(135deg, #475569 0%, #64748b 100%);
+      color: #e2e8f0;
+      padding: 0.3rem 0.6rem;
+      border-radius: 15px;
+      font-size: 0.75rem;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      cursor: default;
+      border: 1px solid #64748b;
+    }
+
+    .sidebar-skill-tag:hover {
+      background: linear-gradient(135deg, #3b82f6 0%, #f97316 100%);
+      color: white;
+      transform: translateY(-1px);
+      box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3);
     }
 
     .content {
@@ -148,13 +202,16 @@
       margin-bottom: 2rem;
     }
 
-    /* Highlight numbers in text */
+    /* Highlight numbers in text with badge style */
     .highlight-number {
-      background: linear-gradient(135deg, #3b82f6 0%, #f97316 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+      background: rgba(59, 130, 246, 0.15);
+      color: #60a5fa;
+      padding: 0.2rem 0.5rem;
+      border-radius: 6px;
       font-weight: 600;
+      border: 1px solid rgba(59, 130, 246, 0.3);
+      white-space: nowrap;
+      font-size: 0.9em;
     }
 
     /* Companies Grid */
@@ -192,7 +249,7 @@
       display: flex;
       align-items: center;
       gap: 1rem;
-      min-height: 100px; /* Ensure consistent height */
+      min-height: 100px;
     }
 
     .company-item::before {
@@ -222,12 +279,12 @@
       border-radius: 8px;
       background: white;
       padding: 8px;
-      flex-shrink: 0; /* Prevent logo from shrinking */
+      flex-shrink: 0;
     }
 
     .company-info {
       flex: 1;
-      min-width: 0; /* Allow text to wrap */
+      min-width: 0;
     }
 
     .company-info h4 {
@@ -245,148 +302,29 @@
       display: block;
     }
 
-    /* Skills Grid */
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
-      margin-bottom: 3rem;
+    /* Project Cards */
+    .projects-header {
+      text-align: left;
+      margin-bottom: 1rem;
     }
 
-    .skill-card {
-      background: linear-gradient(135deg, #475569 0%, #64748b 100%);
-      padding: 1.5rem;
-      border-radius: 12px;
-      border: 1px solid #475569;
-      transition: all 0.3s ease;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .skill-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
-      transition: left 0.5s ease;
-    }
-
-    .skill-card:hover {
-      transform: translateY(-4px) scale(1.02);
-      box-shadow: 0 20px 40px rgba(59, 130, 246, 0.2);
-    }
-
-    .skill-card:hover::before {
-      left: 100%;
-    }
-
-    .skill-card h3 {
-      color: #f8fafc;
-      margin-bottom: 0.5rem;
-      font-size: 1.1rem;
-      position: relative;
-      z-index: 1;
-    }
-
-    .skill-card p {
-      color: #cbd5e1;
-      font-size: 0.9rem;
-      position: relative;
-      z-index: 1;
-    }
-
-    /* Technical Skills */
-    .technical-skills {
-      margin-bottom: 3rem;
-      padding: 2rem;
-      background: linear-gradient(135deg, #334155 0%, #475569 100%);
-      border-radius: 12px;
-      border: 1px solid #475569;
-    }
-
-    .technical-skills h3 {
-      color: #f8fafc;
+    .projects-header h3 {
+      color: #e2e8f0;
       font-size: 1.5rem;
-      margin-bottom: 1.5rem;
-      text-align: center;
+      margin-bottom: 0.25rem;
+      font-weight: 600;
       background: linear-gradient(135deg, #3b82f6 0%, #f97316 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
 
-    .tech-skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
-    }
-
-    .skill-category h4 {
-      color: #e2e8f0;
-      font-size: 1rem;
-      margin-bottom: 0.75rem;
-      font-weight: 600;
-    }
-
-    .skill-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-    }
-
-    .skill-tag {
-      background: linear-gradient(135deg, #3b82f6 0%, #f97316 100%);
-      color: white;
-      padding: 0.4rem 0.8rem;
-      border-radius: 20px;
-      font-size: 0.85rem;
-      font-weight: 500;
-      transition: all 0.3s ease;
-      cursor: default;
-    }
-
-    .skill-tag:hover {
-      transform: translateY(-2px) scale(1.05);
-      box-shadow: 0 5px 15px rgba(59, 130, 246, 0.3);
-    }
-
-    /* Education */
-    .education-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 1.5rem;
-      margin-bottom: 3rem;
-    }
-
-    .education-item {
-      background: linear-gradient(135deg, #475569 0%, #64748b 100%);
-      padding: 1.5rem;
-      border-radius: 12px;
-      border: 1px solid #475569;
-      transition: all 0.3s ease;
-    }
-
-    .education-item:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 20px 40px rgba(59, 130, 246, 0.2);
-    }
-
-    .education-item h4 {
-      color: #f8fafc;
-      font-size: 1.1rem;
-      font-weight: 600;
-      margin-bottom: 0.5rem;
-    }
-
-    .education-item span {
+    .projects-header p {
       color: #94a3b8;
       font-size: 0.9rem;
+      margin: 0;
     }
 
-    /* Project Cards */
     .project-card {
       background: linear-gradient(135deg, #334155 0%, #475569 100%);
       border-radius: 16px;
@@ -499,6 +437,92 @@
       margin-top: 0.25rem;
     }
 
+    /* Skills Grid - moved to bottom */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+    }
+
+    .skill-card {
+      background: linear-gradient(135deg, #475569 0%, #64748b 100%);
+      padding: 1.5rem;
+      border-radius: 12px;
+      border: 1px solid #475569;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .skill-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+      transition: left 0.5s ease;
+    }
+
+    .skill-card:hover {
+      transform: translateY(-4px) scale(1.02);
+      box-shadow: 0 20px 40px rgba(59, 130, 246, 0.2);
+    }
+
+    .skill-card:hover::before {
+      left: 100%;
+    }
+
+    .skill-card h3 {
+      color: #f8fafc;
+      margin-bottom: 0.5rem;
+      font-size: 1.1rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .skill-card p {
+      color: #cbd5e1;
+      font-size: 0.9rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Education */
+    .education-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+    }
+
+    .education-item {
+      background: linear-gradient(135deg, #475569 0%, #64748b 100%);
+      padding: 1.5rem;
+      border-radius: 12px;
+      border: 1px solid #475569;
+      transition: all 0.3s ease;
+    }
+
+    .education-item:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px rgba(59, 130, 246, 0.2);
+    }
+
+    .education-item h4 {
+      color: #f8fafc;
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .education-item span {
+      color: #94a3b8;
+      font-size: 0.9rem;
+    }
+
     @media (max-width: 768px) {
       .container {
         flex-direction: column;
@@ -513,11 +537,17 @@
         display: flex;
         gap: 0.5rem;
         overflow-x: auto;
+        margin-bottom: 1rem;
       }
       
       .nav li {
         margin-bottom: 0;
         min-width: fit-content;
+      }
+
+      .sidebar-skills {
+        border-top: none;
+        padding-top: 0;
       }
       
       .content {
@@ -549,13 +579,64 @@
         <h1>Teju Pamarty</h1>
         <p>Data & Analytics Professional</p>
       </div>
+      
       <ul class="nav">
         <li><button class="active" onclick="showSection('home')"><i class="fa-solid fa-house"></i> Home</button></li>
-        <li><button onclick="showSection('projects')"><i class="fa-solid fa-briefcase"></i> Projects</button></li>
         <li><a href="https://public.tableau.com/app/profile/teju.deep.pamarty/vizzes" target="_blank"><i class="fa-solid fa-chart-bar"></i> Tableau Public</a></li>
         <li><a href="https://linkedin.com/in/tejudeeppamarty" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a></li>
         <li><a href="mailto:teju.deep@gmail.com"><i class="fa-solid fa-envelope"></i> Get in Touch</a></li>
       </ul>
+
+      <div class="sidebar-skills">
+        <h3>Technical Skills</h3>
+        
+        <div class="sidebar-skill-category">
+          <h4>Programming & Querying</h4>
+          <div class="sidebar-skill-tags">
+            <span class="sidebar-skill-tag">SQL</span>
+            <span class="sidebar-skill-tag">Python</span>
+            <span class="sidebar-skill-tag">Hive</span>
+            <span class="sidebar-skill-tag">PySpark</span>
+            <span class="sidebar-skill-tag">Scala</span>
+          </div>
+        </div>
+        
+        <div class="sidebar-skill-category">
+          <h4>Cloud & Data Platforms</h4>
+          <div class="sidebar-skill-tags">
+            <span class="sidebar-skill-tag">AWS</span>
+            <span class="sidebar-skill-tag">Redshift</span>
+            <span class="sidebar-skill-tag">Spark</span>
+            <span class="sidebar-skill-tag">Snowflake</span>
+            <span class="sidebar-skill-tag">Hadoop</span>
+            <span class="sidebar-skill-tag">CloudFormation</span>
+            <span class="sidebar-skill-tag">Teradata</span>
+          </div>
+        </div>
+        
+        <div class="sidebar-skill-category">
+          <h4>Dashboards & BI Tools</h4>
+          <div class="sidebar-skill-tags">
+            <span class="sidebar-skill-tag">Tableau</span>
+            <span class="sidebar-skill-tag">Power BI</span>
+            <span class="sidebar-skill-tag">QuickSight</span>
+            <span class="sidebar-skill-tag">Excel</span>
+            <span class="sidebar-skill-tag">SSRS</span>
+            <span class="sidebar-skill-tag">Kibana</span>
+          </div>
+        </div>
+        
+        <div class="sidebar-skill-category">
+          <h4>Data Engineering & Automation</h4>
+          <div class="sidebar-skill-tags">
+            <span class="sidebar-skill-tag">PySpark</span>
+            <span class="sidebar-skill-tag">Hive</span>
+            <span class="sidebar-skill-tag">SSAS</span>
+            <span class="sidebar-skill-tag">RDBMS</span>
+            <span class="sidebar-skill-tag">Git</span>
+          </div>
+        </div>
+      </div>
     </aside>
 
     <main class="content">
@@ -597,92 +678,10 @@
           </div>
         </div>
 
-        <div class="skills-grid">
-          <div class="skill-card">
-            <h3>Data Engineering & Analytics</h3>
-            <p>Expert in SQL, Python, AWS (Redshift, Athena, S3, Glue, Step Functions). Built and optimized data pipelines serving <span class="highlight-number">1.5M+ employees</span> worldwide. Delivered enterprise-wide reporting platforms for <span class="highlight-number">6 Amazon products</span>, scaling from <span class="highlight-number">15 to 2200+ sites</span> and optimized data models by <span class="highlight-number">90%</span>.</p>
-          </div>
-          <div class="skill-card">
-            <h3>Dashboards & Visualizations</h3>
-            <p>Expert in Tableau, Power BI, QuickSight. Architected, built, managed, and maintained secure robust Tableau environments for over <span class="highlight-number">15,000+ users</span>. Implemented row-level security enterprise-wide and built custom Bash scripts to automate Tableau server tasks. Migrated <span class="highlight-number">150+ dashboards</span> to Power BI leading a global team of <span class="highlight-number">8</span> under <span class="highlight-number">6 months</span>.</p>
-          </div>
-          <div class="skill-card">
-            <h3>Gen AI & Advanced Analytics</h3>
-            <p>Used Claude and Amazon Q to generate agents that provide instant callouts and automate insights. Helped develop and enhance internal AI tools at Amazon for documentation, data dictionaries, summaries, and more. Led Gen AI adoption by building AI agents to automate daily manual tasks, reducing product and customer data requests by <span class="highlight-number">90%</span>.</p>
-          </div>
-          <div class="skill-card">
-            <h3>Technical Leadership</h3>
-            <p>Led cross-functional teams of <span class="highlight-number">8+ engineers</span> through system rebuilds. Presented weekly business reviews to Amazon directors, rolled up to CEO. Owned performance tuning, dashboard strategy, and knowledge sharing. Delivered <span class="highlight-number">$56K annual</span> cost savings through automation.</p>
-          </div>
+        <div class="projects-header">
+          <h3>Key Projects</h3>
+          <p>Showcasing impactful data engineering and analytics projects that delivered measurable business value</p>
         </div>
-
-        <div class="technical-skills">
-          <h3>Technical Skills</h3>
-          <div class="tech-skills-grid">
-            <div class="skill-category">
-              <h4>Programming & Querying</h4>
-              <div class="skill-tags">
-                <span class="skill-tag">SQL</span>
-                <span class="skill-tag">Python</span>
-                <span class="skill-tag">Hive</span>
-                <span class="skill-tag">PySpark</span>
-                <span class="skill-tag">Scala</span>
-              </div>
-            </div>
-            <div class="skill-category">
-              <h4>Cloud & Data Platforms</h4>
-              <div class="skill-tags">
-                <span class="skill-tag">AWS</span>
-                <span class="skill-tag">Redshift</span>
-                <span class="skill-tag">Spark</span>
-                <span class="skill-tag">Snowflake</span>
-                <span class="skill-tag">Hadoop</span>
-                <span class="skill-tag">CloudFormation</span>
-                <span class="skill-tag">Teradata</span>
-              </div>
-            </div>
-            <div class="skill-category">
-              <h4>Dashboards & BI Tools</h4>
-              <div class="skill-tags">
-                <span class="skill-tag">Tableau</span>
-                <span class="skill-tag">Power BI</span>
-                <span class="skill-tag">QuickSight</span>
-                <span class="skill-tag">Excel</span>
-                <span class="skill-tag">SSRS</span>
-                <span class="skill-tag">Kibana</span>
-              </div>
-            </div>
-            <div class="skill-category">
-              <h4>Data Engineering & Automation</h4>
-              <div class="skill-tags">
-                <span class="skill-tag">PySpark</span>
-                <span class="skill-tag">Hive</span>
-                <span class="skill-tag">SSAS</span>
-                <span class="skill-tag">RDBMS</span>
-                <span class="skill-tag">Git</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="companies-header">
-          <h3>Education</h3>
-        </div>
-        <div class="education-grid">
-          <div class="education-item">
-            <h4>University of North Texas</h4>
-            <span>Master's, Electrical Engineering • 2015 – 2017</span>
-          </div>
-          <div class="education-item">
-            <h4>Jawaharlal Nehru Technological University</h4>
-            <span>Bachelor's, Electrical Engineering • 2011 – 2015</span>
-          </div>
-        </div>
-      </section>
-
-      <section id="projects" class="section">
-        <h2>Key Projects</h2>
-        <p>Showcasing impactful data engineering and analytics projects that delivered measurable business value.</p>
 
         <div class="project-card">
           <div class="project-header">
@@ -825,40 +824,6 @@
 
         <div class="project-card">
           <div class="project-header">
-            <h3>Tableau-to-Power BI Migration</h3>
-            <span class="project-tag">Navistar • 2020–2021</span>
-          </div>
-          <div class="project-content">
-            <div class="project-description">
-              <p>Led 8-member global team in comprehensive Tableau-to-Power BI migration, converting 150+ dashboards in under 6 months while ensuring seamless organizational transition and maintaining data integrity.</p>
-              <div class="tech-stack">
-                <span class="tech-tag">Tableau</span>
-                <span class="tech-tag">Power BI</span>
-                <span class="tech-tag">Team Leadership</span>
-                <span class="tech-tag">Migration Strategy</span>
-              </div>
-            </div>
-            <div class="project-metrics">
-              <div class="metric-card">
-                <div class="metric-icon">📊</div>
-                <div class="metric-content">
-                  <div class="metric-number">150+</div>
-                  <div class="metric-label">Dashboards Migrated</div>
-                </div>
-              </div>
-              <div class="metric-card">
-                <div class="metric-icon">👥</div>
-                <div class="metric-content">
-                  <div class="metric-number">8</div>
-                  <div class="metric-label">Global Team Members</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-header">
             <h3>Fraud Detection System</h3>
             <span class="project-tag">Navistar • 2019–2020</span>
           </div>
@@ -888,6 +853,42 @@
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+
+        <div class="companies-header">
+          <h3>Core Competencies</h3>
+        </div>
+        <div class="skills-grid">
+          <div class="skill-card">
+            <h3>Data Engineering & Analytics</h3>
+            <p>Expert in SQL, Python, AWS (Redshift, Athena, S3, Glue, Step Functions). Built and optimized data pipelines serving <span class="highlight-number">1.5M+ employees</span> worldwide. Delivered enterprise-wide reporting platforms for <span class="highlight-number">6 Amazon products</span>, scaling from <span class="highlight-number">15 to 2200+ sites</span> and optimized data models by <span class="highlight-number">90%</span>.</p>
+          </div>
+          <div class="skill-card">
+            <h3>Dashboards & Visualizations</h3>
+            <p>Expert in Tableau, Power BI, QuickSight. Architected, built, managed, and maintained secure robust Tableau environments for over <span class="highlight-number">15,000+ users</span>. Implemented row-level security enterprise-wide and built custom Bash scripts to automate Tableau server tasks. Migrated <span class="highlight-number">150+ dashboards</span> to Power BI leading a global team of <span class="highlight-number">8</span> under <span class="highlight-number">6 months</span>.</p>
+          </div>
+          <div class="skill-card">
+            <h3>Gen AI & Advanced Analytics</h3>
+            <p>Used Claude and Amazon Q to generate agents that provide instant callouts and automate insights. Helped develop and enhance internal AI tools at Amazon for documentation, data dictionaries, summaries, and more. Led Gen AI adoption by building AI agents to automate daily manual tasks, reducing product and customer data requests by <span class="highlight-number">90%</span>.</p>
+          </div>
+          <div class="skill-card">
+            <h3>Technical Leadership</h3>
+            <p>Led cross-functional teams of <span class="highlight-number">8+ engineers</span> through system rebuilds. Presented weekly business reviews to Amazon directors, rolled up to CEO. Owned performance tuning, dashboard strategy, and knowledge sharing. Delivered <span class="highlight-number">$56K annual</span> cost savings through automation.</p>
+          </div>
+        </div>
+
+        <div class="companies-header">
+          <h3>Education</h3>
+        </div>
+        <div class="education-grid">
+          <div class="education-item">
+            <h4>University of North Texas</h4>
+            <span>Master's, Electrical Engineering • 2015 – 2017</span>
+          </div>
+          <div class="education-item">
+            <h4>Jawaharlal Nehru Technological University</h4>
+            <span>Bachelor's, Electrical Engineering • 2011 – 2015</span>
           </div>
         </div>
       </section>
