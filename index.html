@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Teju Pamarty - Data & Analytics Portfolio</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
   <div class="container">
@@ -15,94 +16,66 @@
         <p>Data & Analytics Professional</p>
       </div>
       <ul class="nav">
-        <li><button class="active" onclick="showSection('about')">About</button></li>
-        <li><button onclick="showSection('career')">Career Journey</button></li>
-        <li><button onclick="showSection('data')">Data Engineering & Analytics</button></li>
-        <li><button onclick="showSection('viz')">Dashboards & Visualizations</button></li>
-        <li><button onclick="showSection('ai')">Gen AI & Advanced Analytics</button></li>
-        <li><button onclick="showSection('leadership')">Technical Leadership</button></li>
-        <li><button onclick="showSection('skills')">Technical Skills</button></li>
-        <li><button onclick="showSection('projects')">Projects</button></li>
-        <li><a href="mailto:teju.deep@gmail.com" class="btn">Get in Touch</a></li>
-        <li><a href="https://public.tableau.com/app/profile/teju.deep.pamarty/vizzes" class="btn" target="_blank">Tableau Public</a></li>
+        <li><button class="active" onclick="showSection('home')"><i class="fa-solid fa-house"></i> Home</button></li>
+        <li><button onclick="showSection('projects')"><i class="fa-solid fa-briefcase"></i> Projects</button></li>
+        <li><a href="https://public.tableau.com/app/profile/teju.deep.pamarty/vizzes" class="btn" target="_blank"><i class="fa-solid fa-chart-bar"></i> Tableau Public</a></li>
+        <li><a href="https://linkedin.com/in/tejudeeppamarty" class="btn" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a></li>
+        <li><a href="mailto:teju.deep@gmail.com" class="btn"><i class="fa-solid fa-envelope"></i> Get in Touch</a></li>
       </ul>
     </aside>
 
     <main class="content">
-      <section id="about" class="section active">
+      <section id="home" class="section active">
         <div class="hero">
           <h2>About Me</h2>
           <p>A creative problem-solver with an insatiable curiosity and a unique approach to technical challenges. My professional philosophy is to find innovative, unconventional solutions that not only solve problems but transform them into opportunities for efficiency and growth.</p>
           <p>I've worked with a wide range of companies — from startups to industry leaders like Amazon, PODS, Navistar, and Wells Fargo — building scalable systems, streamlining analytics, and leading Gen AI adoption.</p>
+
+          <h2>Career Journey</h2>
+          <ul>
+            <li><strong>Amazon</strong> – Business Intelligence Engineer (2022 – Present)</li>
+            <li><strong>PODS</strong> – BI Lead (2021 – 2022)</li>
+            <li><strong>Navistar</strong> – BI Engineer (2018 – 2021)</li>
+            <li><strong>Wells Fargo</strong> – Data Analyst (2017 – 2018)</li>
+          </ul>
+
+          <h2>Technical Skills</h2>
+          <ul>
+            <li><strong>Programming & Querying:</strong> SQL, Python, Hive, PySpark, Scala</li>
+            <li><strong>Cloud & Data Platforms:</strong> AWS, Redshift, Spark, Snowflake, Hadoop, CloudFormation, Teradata</li>
+            <li><strong>Dashboards & BI Tools:</strong> Tableau, Power BI, QuickSight, Excel, SSRS, Kibana</li>
+            <li><strong>Data Engineering & Automation:</strong> PySpark, Hive, SSAS, RDBMS, Git</li>
+          </ul>
         </div>
-      </section>
-
-      <section id="career" class="section">
-        <h2>Career Journey</h2>
-        <ul>
-          <li><strong>Amazon</strong> – Business Intelligence Engineer (2022 – Present)</li>
-          <li><strong>PODS</strong> – BI Lead (2021 – 2022)</li>
-          <li><strong>Navistar</strong> – BI Engineer (2018 – 2021)</li>
-          <li><strong>Wells Fargo</strong> – Data Analyst (2017 – 2018)</li>
-        </ul>
-      </section>
-
-      <section id="data" class="section">
-        <h2>Data Engineering & Analytics</h2>
-        <p>Expert in SQL, Python, AWS (Redshift, Athena, S3, Glue, Step Functions). Built and optimized data pipelines serving 1.5M+ employees worldwide. Delivered enterprise-wide reporting platforms for 6 Amazon products, scaling from 15 to 2200+ sites and optimized data models by 90%. Identified $5M+ in warranty frauds using advanced analytics at Navistar.</p>
-      </section>
-
-      <section id="viz" class="section">
-        <h2>Dashboards & Visualizations</h2>
-        <p>Expert in Tableau, Power BI, and Quicksight. Built and managed robust Tableau environments for 15,000+ users with row-level security and automated server tasks. Migrated 150+ dashboards to Power BI with a global team of 8. Delivered self-service dashboards saving 16 hours/week and $56K/year.</p>
-      </section>
-
-      <section id="ai" class="section">
-        <h2>Gen AI & Advanced Analytics</h2>
-        <p>Developed agents with Claude and Amazon Q for automated data insights and documentation. Reduced manual requests by 90%. Led Gen AI adoption by building internal tools that act as scrum masters, documentation generators, and data quality monitors.</p>
-      </section>
-
-      <section id="leadership" class="section">
-        <h2>Technical Leadership</h2>
-        <p>Led cross-functional teams of 8+ through complex migrations and rebuilds. Owned and presented weekly business reviews to directors and executive leadership at Amazon. Spearheaded knowledge-sharing initiatives and platform adoption across orgs.</p>
-      </section>
-
-      <section id="skills" class="section">
-        <h2>Technical Skills</h2>
-        <ul>
-          <li><strong>Programming & Querying:</strong> SQL, Python, Hive, PySpark, Scala</li>
-          <li><strong>Cloud & Data Platforms:</strong> AWS, Redshift, Spark, Snowflake, Hadoop, CloudFormation, Teradata</li>
-          <li><strong>Dashboards & BI Tools:</strong> Tableau, Power BI, QuickSight, Excel, SSRS, Kibana</li>
-          <li><strong>Data Engineering & Automation:</strong> PySpark, Hive, SSAS, RDBMS, Git</li>
-        </ul>
       </section>
 
       <section id="projects" class="section">
         <h2>Key Projects</h2>
+
         <div class="project">
           <h3>📊 Enterprise Reporting Platform <span>Amazon • 2023–2024</span></h3>
           <ul>
-            <li>Built scalable reporting used across 6 products and 2,200+ sites.</li>
+            <li>Built scalable reporting used across <span class="stat">2,200+</span> sites and 6 major Amazon products</li>
             <li><strong>🛠 Tools:</strong> AWS Redshift, SQL, Tableau</li>
-            <li><strong>📈 Impact:</strong> Saved 90 mins/day for thousands of users, 85%+ adoption</li>
+            <li><strong>📈 Impact:</strong> <span class="stat">85%+</span> adoption, saved 90 mins/day for thousands of users</li>
           </ul>
         </div>
 
         <div class="project">
           <h3>🤖 Gen AI-Powered Dashboards <span>Amazon • 2024</span></h3>
           <ul>
-            <li>Integrated 115+ metrics using Gen AI. Automated callouts, reduced dependency on manual entries.</li>
+            <li>Integrated 115+ metrics with Gen AI. Reduced manual entries by <span class="stat">90%</span></li>
             <li><strong>🛠 Tools:</strong> Claude, Amazon Q, Python, QuickSight</li>
-            <li><strong>💰 Savings:</strong> $56,000/year</li>
+            <li><strong>💰 Savings:</strong> <span class="stat">$56,000/year</span></li>
           </ul>
         </div>
 
         <div class="project">
           <h3>🔍 Fraud Detection Analytics <span>Navistar • 2020</span></h3>
           <ul>
-            <li>Detected $5M in warranty fraud using truck mileage and coverage analytics.</li>
+            <li>Uncovered <span class="stat">$5M+</span> in warranty fraud using advanced analytics on truck mileage & warranty data</li>
             <li><strong>🛠 Tools:</strong> Tableau, SQL, Hive</li>
-            <li><strong>💡 Result:</strong> Actionable insights presented to leadership</li>
+            <li><strong>💡 Result:</strong> Executive insights that influenced fraud policy</li>
           </ul>
         </div>
       </section>
